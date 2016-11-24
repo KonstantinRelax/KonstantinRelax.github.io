@@ -1,0 +1,22 @@
+header{
+    font-family: cursive;
+    color: grey;
+}
+body {
+	/*I'm crazy about this background!!!*/
+   background-color: #aeaeae;   
+}
+#my_box{
+	margin-top: 50px;
+	height: 100px;
+	border: 2px solid black;
+}
+#box{
+	background-color: #0f0;
+	height: 50px;
+	border: 1px solid white;
+}
+footer {
+    font-family: cursive;
+    background-color: #6060ff;
+}

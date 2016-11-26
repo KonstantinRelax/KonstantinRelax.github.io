@@ -4,7 +4,9 @@ header{
 }
 body {
 	/*I'm crazy about this background!!!*/
-   background-color: #aeaeae;   
+   background-color: #aeaeae;  
+   margin-left: 80px;
+   margin-right: 80px;    
 }
 #my_box{
 	margin-top: 50px;

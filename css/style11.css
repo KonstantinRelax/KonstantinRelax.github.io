@@ -1,0 +1,55 @@
+header{
+  margin: 82px 152px 0px 150px;
+}
+#logo-header-border{
+  border: 2px solid #6f6f6f;
+  height: 55px;
+  width: 150px;
+  text-height: 49px;
+  border-radius: 3px;
+  text-align: center;
+  text-height: 49px;
+}
+#header-logo{
+  font-family: "open sans", sans-serif;
+  font-size: 36px;
+  width: 600px;
+  position: relative;
+  display: inline;
+  color: #6f6f6f;
+}
+#header-logo span{
+  color: #fa9a87;
+}
+#line{
+  text-align: right;
+  margin-top: 0px;
+}
+#drop-menu{
+  display: inline-block;
+  width: 35px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #6f6f6f;
+}
+#drop-menu::before{
+  content: '';
+  display: inline-block;
+  width: 35px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #6f6f6f; 
+}
+#drop-menu::after{
+  content: '';
+  display: inline-block;
+  width: 35px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #6f6f6f;
+  --webkit-transform: translateY(-9px);
+  -ms-transform: translateY(-9px);
+  -o-transform: translateY(-9px);
+  transform: translateY(-9px);  
+}
+

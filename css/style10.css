@@ -12,7 +12,9 @@ header{
 body {
 	/*I'm crazy about this background!!!*/
    margin-top: 100px;
-   background-color: #aeaeae;   
+   background-color: #aeaeae;
+   margin-left: 80px;
+   margin-right: 80px;   
 }
 .box{
 	background-color: #0f0;

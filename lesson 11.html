@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,22 +11,45 @@
     <link rel="stylesheet" href="css/style11.css">
   </head>
   <body>
-    <header>
-      <div class="container" id="header">
-        <div class="row">
-          <div class="col-xs-6">
-            <div id="logo-header-border">
-            <p id="header-logo"><span>S</span>mart</p>
-          </div>
-          </div>
-          <div class="col-xs-6" id="line">
-            <a href="#">
-            <span id="drop-menu">  </span>
-            </a>
+   <header>
+     <container id="logo">
+       <div class="row" id="logo">
+         <div class="col-lg-6 header-logo">
+           <div class="header-logo-border">
+             <p class="header-logo-text">
+               <span>S</span>mart
+             </p>
+           </div>
+           
+         </div>
+         <div class="col-lg-6">
+           <div class="header-drop"></div>
+         </div>
+       </div>
+     </container>
+     <container class="head-title">
+       <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+          <p class="title text-center"><span>Smart</span> Agensy Landing Page</p>
+          <p class="title-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, fuga provident. Libero magni quibusdam labore ad iste saepe hic, maxime qui ipsum tempore beatae, volu tomi ptates doloremque rerum aspernatur dolorum at!</p>
           </div>
         </div>
-      </div>
-    </header>
+     </container>
+     <container class="report-form">
+       <div class="row">
+         <div class="col-lg-4">
+           <form action="#">
+             <p><span>Send</span> A Message</p>
+             <input type="text" placeholder="Your Name">
+             <input type="email" placeholder="Your Email">
+             <textarea rows="3" placeholder="Your Message"></textarea> 
+             <button class="form-button">Send A Message</button>      
+            </form>
+         </div>
+       </div>
+     </container>
+   </header>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>

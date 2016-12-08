@@ -57,27 +57,6 @@
   font-family: "open sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* #plus{
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 15px;
-				height: 2px;
-				text-align: center;
-				margin:auto;
-				vertical-align: center;
-				.rotate(90deg);
-				.translate(-7px, 7px);
-			}
-			#plus::before{
-				content: '';
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 2px;
-				height: 15px;	
-				vertical-align: center;
-				
-				
-			} */
 }
 .icons-box button .btn-text span {
   display: inline-block;
@@ -87,8 +66,8 @@
   -o-transform: translate(0, 4px);
   transform: translate(0, 4px);
 }
-.icons-box button:focus {
-  box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+.icons-box button:hover {
+  box-shadow: 0px 11px 35px 0px rgba(2, 20, 21, 0.08);
   outline: none;
 }
 .open {
@@ -292,27 +271,6 @@ header .report-form .row form .form-button {
   font-family: "open sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* #plus{
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 15px;
-				height: 2px;
-				text-align: center;
-				margin:auto;
-				vertical-align: center;
-				.rotate(90deg);
-				.translate(-7px, 7px);
-			}
-			#plus::before{
-				content: '';
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 2px;
-				height: 15px;	
-				vertical-align: center;
-				
-				
-			} */
 }
 .icons .koi button .btn-text span {
   display: inline-block;
@@ -322,8 +280,8 @@ header .report-form .row form .form-button {
   -o-transform: translate(0, 4px);
   transform: translate(0, 4px);
 }
-.icons .koi button:focus {
-  box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+.icons .koi button:hover {
+  box-shadow: 0px 11px 35px 0px rgba(2, 20, 21, 0.08);
   outline: none;
 }
 .icons .koir {
@@ -364,27 +322,6 @@ header .report-form .row form .form-button {
   font-family: "open sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* #plus{
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 15px;
-				height: 2px;
-				text-align: center;
-				margin:auto;
-				vertical-align: center;
-				.rotate(90deg);
-				.translate(-7px, 7px);
-			}
-			#plus::before{
-				content: '';
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 2px;
-				height: 15px;	
-				vertical-align: center;
-				
-				
-			} */
 }
 .icons .koir button .btn-text span {
   display: inline-block;
@@ -394,8 +331,8 @@ header .report-form .row form .form-button {
   -o-transform: translate(0, 4px);
   transform: translate(0, 4px);
 }
-.icons .koir button:focus {
-  box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+.icons .koir button:hover {
+  box-shadow: 0px 11px 35px 0px rgba(2, 20, 21, 0.08);
   outline: none;
 }
 .icons .set {
@@ -436,27 +373,6 @@ header .report-form .row form .form-button {
   font-family: "open sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* #plus{
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 15px;
-				height: 2px;
-				text-align: center;
-				margin:auto;
-				vertical-align: center;
-				.rotate(90deg);
-				.translate(-7px, 7px);
-			}
-			#plus::before{
-				content: '';
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 2px;
-				height: 15px;	
-				vertical-align: center;
-				
-				
-			} */
 }
 .icons .set button .btn-text span {
   display: inline-block;
@@ -466,8 +382,8 @@ header .report-form .row form .form-button {
   -o-transform: translate(0, 4px);
   transform: translate(0, 4px);
 }
-.icons .set button:focus {
-  box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+.icons .set button:hover {
+  box-shadow: 0px 11px 35px 0px rgba(2, 20, 21, 0.08);
   outline: none;
 }
 .icons .lara {
@@ -508,27 +424,6 @@ header .report-form .row form .form-button {
   font-family: "open sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* #plus{
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 15px;
-				height: 2px;
-				text-align: center;
-				margin:auto;
-				vertical-align: center;
-				.rotate(90deg);
-				.translate(-7px, 7px);
-			}
-			#plus::before{
-				content: '';
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 2px;
-				height: 15px;	
-				vertical-align: center;
-				
-				
-			} */
 }
 .icons .lara button .btn-text span {
   display: inline-block;
@@ -538,8 +433,8 @@ header .report-form .row form .form-button {
   -o-transform: translate(0, 4px);
   transform: translate(0, 4px);
 }
-.icons .lara button:focus {
-  box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+.icons .lara button:hover {
+  box-shadow: 0px 11px 35px 0px rgba(2, 20, 21, 0.08);
   outline: none;
 }
 .icons .lara .fa {
@@ -547,4 +442,57 @@ header .report-form .row form .form-button {
   -ms-transform: rotate(-15deg);
   -o-transform: rotate(-15deg);
   transform: rotate(-15deg);
+}
+.gallery {
+  margin: 0 8%;
+}
+.gallery .working-group {
+  margin-top: 3%;
+}
+.gallery .working-group .gallery-bg img {
+  position: relative;
+  width: 360px;
+  height: 360px;
+}
+.gallery .working-group .gallery-object {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 360px;
+  height: 360px;
+  background-color: #000;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.gallery .working-group .gallery-object .gallery-button {
+  margin: auto;
+  -webkit-transform: translate(0, 150px);
+  -ms-transform: translate(0, 150px);
+  -o-transform: translate(0, 150px);
+  transform: translate(0, 150px);
+  display: inline-block;
+  height: 55px;
+  width: 240px;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  -ms-border-radius: 70px;
+  -o-border-radius: 70px;
+  border-radius: 70px;
+  border: none;
+  display: block;
+  background-color: #fc7254;
+  color: #ffffff;
+  font-size: 16px;
+}
+.gallery .working-group .gallery-object:hover {
+  opacity: .9;
+}
+.tab .list {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #000;
 }

@@ -1,4 +1,5 @@
 // All colors of LP
+
 @white: #fff;
 @baseBlack: #6e6e6e;
 @baseRed: #fc7254;
@@ -84,32 +85,11 @@
 				font-size: 30px;
 				.translate(0, 4px);
 			}
-			/* #plus{
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 15px;
-				height: 2px;
-				text-align: center;
-				margin:auto;
-				vertical-align: center;
-				.rotate(90deg);
-				.translate(-7px, 7px);
-			}
-			#plus::before{
-				content: '';
-				display: inline-block;
-				background-color: @baseBlack;
-				width: 2px;
-				height: 15px;	
-				vertical-align: center;
-				
-				
-			} */
 		}
 
 	}
-	button:focus{
-		box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+	button:hover{
+		box-shadow: 0px 11px 35px 0px rgba(2	, 20, 21, 0.08);
 		outline: none;
 	}
 }
@@ -253,5 +233,55 @@ header{
 
 	}
 }
+.gallery{
+	margin: 0 8%;
+	.working-group{
+		margin-top: 3%;
+		.gallery-bg{
+			img{
+				position: relative;
+				width: 360px;
+				height: 360px;
+			}
+		}
+		.gallery-object{
+			position: absolute;
+			top: 0;
+			left: 15px;
+			width: 360px;
+			height: 360px;
+			background-color: #000;
+			text-align: center;
+			opacity: 0;
+			-webkit-transition: all .5s;
+			-o-transition: all .5s;
+			transition: all .5s;
+			.gallery-button{
+				margin: auto;
+				.translate(0, 150px);
+				display: inline-block;
+				height: 55px;
+				width: 240px;
+				.border-radius(70px);
+				border: none;
+				display: block;
+				background-color: @baseRed;
+				color: @white;
+				font-size: 16px;
+			}
+			&:hover{
+				opacity: .9;
+			}
+		}
+	}
+}
+.tab{
+	.list{
+		display: block;
+		
+		width: 100px;
+		height: 100px;
+		background-color: #000;
+	}
 
-
+}

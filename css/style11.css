@@ -50,6 +50,7 @@
   background-color: #ffffff;
 }
 .icons-box button .btn-text {
+  padding-bottom: 50%;
   display: block;
   text-align: center;
   vertical-align: center;
@@ -268,6 +269,7 @@ header .report-form .row form .form-button {
   background-color: #ffffff;
 }
 .icons .koi button .btn-text {
+  padding-bottom: 50%;
   display: block;
   text-align: center;
   vertical-align: center;
@@ -319,6 +321,7 @@ header .report-form .row form .form-button {
   background-color: #ffffff;
 }
 .icons .koir button .btn-text {
+  padding-bottom: 50%;
   display: block;
   text-align: center;
   vertical-align: center;
@@ -370,6 +373,7 @@ header .report-form .row form .form-button {
   background-color: #ffffff;
 }
 .icons .set button .btn-text {
+  padding-bottom: 50%;
   display: block;
   text-align: center;
   vertical-align: center;
@@ -421,6 +425,7 @@ header .report-form .row form .form-button {
   background-color: #ffffff;
 }
 .icons .lara button .btn-text {
+  padding-bottom: 50%;
   display: block;
   text-align: center;
   vertical-align: center;
@@ -493,6 +498,9 @@ header .report-form .row form .form-button {
 }
 .gallery .working-group .gallery-object:hover {
   opacity: .9;
+}
+section .tab {
+  height: 500px;
 }
 .tab {
   margin: 3% 7%;

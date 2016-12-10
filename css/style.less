@@ -106,10 +106,14 @@
 	font-weight: 400;
 }
 // Code is there
+html{
+	width: 100vw;
+}
 header{
 	background-image: url(../img/header-bgi.png);
 	background-position: bottom;
-	height: 100vh;
+	width: 100vw;
+	background-repeat: no-repeat;
 	container {
 		.row{
 			padding: 82px 150px 20px 152px;
@@ -275,13 +279,52 @@ header{
 		}
 	}
 }
+
 .tab{
-	.list{
+	margin: 3% 7%;
+	color: @baseBlack;
+	&-line{
+		width: 57px;
+		height: 3px;
 		display: block;
-		
-		width: 100px;
-		height: 100px;
-		background-color: #000;
+		background-color: @baseRed;
+		margin-bottom: 13px;
+	}
+	.list{
+		ul li {
+			list-style: none; 
+			&:focus {
+				box-shadow: 0px 0px 36px 0px rgba(20, 20, 21, 0.2);
+			}
+		}
+		display: block;
+		margin-top: 15px;
+		&-text{
+
+		}
+		&-picture{
+			
+		}
 	}
 
+}
+.nav-tabs{
+	border: none;
+}
+.nav-tabs>li.active>a:hover{
+	border: none;
+	box-shadow: 0px 0px 36px 0px rgba(20, 20, 21, 0.2);
+}
+.accordion-panel{
+	margin: 3% 7&;
+	padding: 0 7%;
+}
+.panel-default>.panel-heading{
+	color: @white;
+	background-color: @baseRed;
+
+}
+#accordion a:focus, #accordion a:hover{
+	text-decoration: none;
+	font-size: 20px;
 }

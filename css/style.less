@@ -296,6 +296,7 @@ section .tab{
 	}
 	.list{
 		ul li {
+			border: none;
 			list-style: none; 
 			&:focus {
 				box-shadow: 0px 0px 36px 0px rgba(20, 20, 21, 0.2);
@@ -331,4 +332,55 @@ section .tab{
 #accordion a:focus, #accordion a:hover{
 	text-decoration: none;
 	font-size: 20px;
+}
+.slider{
+	height: 100vh;
+	.container{
+		.row{
+			.col-lg-6{
+				padding-top: 50px;
+			}
+			.wrap-img{
+			text-align: center;
+			margin: 0 3%;
+			padding: 0 7%;
+				img{
+					.border-radius(50%);
+					position: absolute;
+					height: 100px;
+					.translate(-50px, -150px);
+					left: 50%;
+			}
+
+			}
+			.box-for-shadow{
+				text-align: center;
+				box-shadow: 0px 0px 27px 0px rgba(20, 20, 21, 0.09);
+				margin: 3%;
+				padding: 30px;
+				padding-top: 100px;
+				i{
+					color: yellow;
+				}
+				span{
+					font-weight: bolder;
+					font-style: italic;
+				}
+				&:focus{
+					outline: none;
+				}
+				p{
+					&:focus{
+					outline: none;
+					}
+				}
+
+			}
+		}
+	}
+}
+.slick-slide{
+	&:focus{
+		outline: none;
+	}
 }

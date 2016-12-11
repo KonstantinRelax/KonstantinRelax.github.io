@@ -518,6 +518,7 @@ section .tab {
   margin-top: 15px;
 }
 .tab .list ul li {
+  border: none;
   list-style: none;
 }
 .tab .list ul li:focus {
@@ -542,4 +543,52 @@ section .tab {
 #accordion a:hover {
   text-decoration: none;
   font-size: 20px;
+}
+.slider {
+  height: 100vh;
+}
+.slider .container .row .col-lg-6 {
+  padding-top: 50px;
+}
+.slider .container .row .wrap-img {
+  text-align: center;
+  margin: 0 3%;
+  padding: 0 7%;
+}
+.slider .container .row .wrap-img img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  height: 100px;
+  -webkit-transform: translate(-50px, -150px);
+  -ms-transform: translate(-50px, -150px);
+  -o-transform: translate(-50px, -150px);
+  transform: translate(-50px, -150px);
+  left: 50%;
+}
+.slider .container .row .box-for-shadow {
+  text-align: center;
+  box-shadow: 0px 0px 27px 0px rgba(20, 20, 21, 0.09);
+  margin: 3%;
+  padding: 30px;
+  padding-top: 100px;
+}
+.slider .container .row .box-for-shadow i {
+  color: yellow;
+}
+.slider .container .row .box-for-shadow span {
+  font-weight: bolder;
+  font-style: italic;
+}
+.slider .container .row .box-for-shadow:focus {
+  outline: none;
+}
+.slider .container .row .box-for-shadow p:focus {
+  outline: none;
+}
+.slick-slide:focus {
+  outline: none;
 }

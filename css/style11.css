@@ -49,6 +49,11 @@
   margin-top: 53px;
   background-color: #ffffff;
 }
+.icons-box button:hover,
+.icons-box button:target,
+.icons-box button:focus {
+  outline: none;
+}
 .icons-box button .btn-text {
   padding-bottom: 50%;
   display: block;
@@ -268,6 +273,11 @@ header .report-form .row form .form-button {
   margin-top: 53px;
   background-color: #ffffff;
 }
+.icons .koi button:hover,
+.icons .koi button:target,
+.icons .koi button:focus {
+  outline: none;
+}
 .icons .koi button .btn-text {
   padding-bottom: 50%;
   display: block;
@@ -319,6 +329,11 @@ header .report-form .row form .form-button {
   border: none;
   margin-top: 53px;
   background-color: #ffffff;
+}
+.icons .koir button:hover,
+.icons .koir button:target,
+.icons .koir button:focus {
+  outline: none;
 }
 .icons .koir button .btn-text {
   padding-bottom: 50%;
@@ -372,6 +387,11 @@ header .report-form .row form .form-button {
   margin-top: 53px;
   background-color: #ffffff;
 }
+.icons .set button:hover,
+.icons .set button:target,
+.icons .set button:focus {
+  outline: none;
+}
 .icons .set button .btn-text {
   padding-bottom: 50%;
   display: block;
@@ -424,6 +444,11 @@ header .report-form .row form .form-button {
   margin-top: 53px;
   background-color: #ffffff;
 }
+.icons .lara button:hover,
+.icons .lara button:target,
+.icons .lara button:focus {
+  outline: none;
+}
 .icons .lara button .btn-text {
   padding-bottom: 50%;
   display: block;
@@ -475,6 +500,11 @@ header .report-form .row form .form-button {
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
 }
 .gallery .working-group .gallery-object .gallery-button {
   margin: auto;
@@ -495,6 +525,9 @@ header .report-form .row form .form-button {
   background-color: #fc7254;
   color: #ffffff;
   font-size: 16px;
+}
+.gallery .working-group .gallery-object .gallery-button:focus {
+  outline: none;
 }
 .gallery .working-group .gallery-object:hover {
   opacity: .9;
@@ -613,4 +646,28 @@ section .tab {
 }
 .fa-chevron-right {
   right: 0;
+}
+footer {
+  height: 150px;
+  background-color: #f7f7f7;
+}
+footer .footer-btn {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0px 3px 14px 0px rgba(20, 20, 21, 0.28);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: 50px;
+  padding: 12px 45px;
+}
+footer .footer-btn:hover {
+  background-color: #fc7254;
+  color: #ffffff;
+}
+footer .footer-btn:focus,
+footer .footer-btn:target {
+  outline: none;
 }

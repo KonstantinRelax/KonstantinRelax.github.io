@@ -47,7 +47,7 @@
              <input type="text" placeholder="Your Name">
              <input type="email" placeholder="Your Email">
              <textarea rows="3" placeholder="Your Message"></textarea> 
-             <button class="form-button">Send A Message</button>      
+             <button data-toggle="modal" data-target="#modal1" class="form-button">Send A Message</button>      
             </form>
          </div>
        </div>
@@ -70,8 +70,8 @@
             <h2 class="fa fa-magnet"></h2><br>
             <span>Koc Koi Tomi</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-            <button class="icons-btn">
-              <div class="btn-text"><span id="plus"></span><span>+</span> Know More</div>
+            <button data-toggle="modal" data-target="#modal1"  class="icons-btn" data-toggle="modal" data-target="#modal">
+              <div class="btn-text" ><span id="plus"></span><span>+</span> Know More</div>
             </button>
             </div>
           </div>
@@ -80,7 +80,7 @@
             <h2 class="fa fa-bug"></h2><br>
             <span>Koimona Set</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-            <button class="icons-btn"><div class="btn-text"><span id="plus"></span><span>+</span> Know More</div></button>
+            <button data-toggle="modal" data-target="#modal1"   class="icons-btn"><div class="btn-text"><span id="plus"></span><span>+</span> Know More</div></button>
             </div>
           </div>
           <div class="col-lg-3">
@@ -88,7 +88,7 @@
             <h2 class="fa fa-cogs"></h2><br>
             <span>Setting Koire</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-            <button class="icons-btn"><div class="btn-text"><span id="plus"></span><span>+</span> Know More</div></button>
+            <button data-toggle="modal" data-target="#modal1"  class="icons-btn"><div class="btn-text"><span id="plus"></span><span>+</span> Know More</div></button>
             </div>
           </div>
           <div class="col-lg-3">
@@ -96,7 +96,7 @@
             <h2 class="fa fa-camera-retro"></h2><br>
             <span>Ko Image Lara</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-            <button class="icons-btn"><div class="btn-text"><span id="plus"></span><span>+</span> Know More</div></button>
+            <button data-toggle="modal" data-target="#modal1"  class="icons-btn"><div class="btn-text"><span id="plus"></span><span>+</span> Know More</div></button>
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@
             <div class="gallery-bg">
               <img src="img/effects/1.png" alt="">
               <div class="gallery-object">
-                <button class="gallery-button">Visit Gallery</button> 
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button> 
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@
             <div class="gallery-bg">
             <img src="img/effects/2.png" alt="">
               <div class="gallery-object">
-                <button class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@
             <div class="gallery-bg">
             <img src="img/effects/3.jpg" alt="">
               <div class="gallery-object">
-                <button class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@
             <div class="gallery-bg">
               <img src="img/effects/2.png" alt="">
               <div class="gallery-object">
-                <button class="gallery-button">Visit Gallery</button> 
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button> 
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@
             <div class="gallery-bg">
             <img src="img/effects/3.jpg" alt="">
               <div class="gallery-object">
-                <button class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@
             <div class="gallery-bg">
             <img src="img/effects/1.png" alt="">
               <div class="gallery-object">
-                <button class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -174,7 +174,7 @@
             <div class="gallery-bg">
               <img src="img/effects/3.jpg" alt="">
               <div class="gallery-object">
-                <button class="gallery-button">Visit Gallery</button> 
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button> 
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@
             <div class="gallery-bg">
             <img src="img/effects/1.png" alt="">
               <div class="gallery-object">
-                <button class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@
             <div class="gallery-bg">
             <img src="img/effects/2.png" alt="">
               <div class="gallery-object">
-                <button class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -414,7 +414,37 @@
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <button data-toggle="modal" data-target="#modal1"  class="footer-btn">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button data-toggle="modal" data-target="#modal1" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            no time for philosophy
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

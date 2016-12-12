@@ -73,6 +73,9 @@
 		border: none;
 		margin-top: 53px;
 		background-color: @white;
+		&:hover, &:target, &:focus{
+				outline: none;
+			}
 		.btn-text{
 			padding-bottom: 50%;
 			display: block;
@@ -87,6 +90,7 @@
 				font-size: 30px;
 				.translate(0, 4px);
 			}
+
 		}
 
 	}
@@ -262,6 +266,7 @@ header{
 			-webkit-transition: all .5s;
 			-o-transition: all .5s;
 			transition: all .5s;
+			.border-radius(40px);
 			.gallery-button{
 				margin: auto;
 				.translate(0, 150px);
@@ -274,6 +279,9 @@ header{
 				background-color: @baseRed;
 				color: @white;
 				font-size: 16px;
+				&:focus{
+					outline: none;
+				}
 			}
 			&:hover{
 				opacity: .9;
@@ -403,4 +411,24 @@ section .tab{
 }
 .fa-chevron-right{
 	right:0;
+}
+
+footer{
+	height: 150px;
+	background-color: #f7f7f7;
+	.footer-btn{
+		background-color: @white;
+		border: none;
+		box-shadow: 0px 3px 14px 0px rgba(20, 20, 21, 0.28);
+		.border-radius(50px);
+		margin-top: 50px;
+		padding: 12px 45px;
+		&:hover{
+			background-color: @baseRed;
+			color: @white;
+		}
+		&:focus, &:target{
+			outline: none;
+		}
+	}
 }

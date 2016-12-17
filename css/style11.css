@@ -1,3 +1,43 @@
+@keyframes btn-main {
+  from {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    background-color: green;
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  to {
+    -webkit-border-radius: 300px;
+    -moz-border-radius: 300px;
+    -ms-border-radius: 300px;
+    -o-border-radius: 300px;
+    border-radius: 300px;
+  }
+}
+button:hover {
+  -webkit-animation: btn-main 2s linear 1s 1 normal forwards;
+  -o-animation: btn-main 2s linear 1s 1 normal forwards;
+  animation: btn-main 2s linear 1s 1 normal forwards;
+}
 .base-form {
   border: none;
   width: 80%;

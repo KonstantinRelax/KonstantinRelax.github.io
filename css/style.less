@@ -9,7 +9,34 @@
 @bgSet: #817eff;
 @bgLara: #f74770;
 
+// animation
+@keyframes btn-main {
+	from{
+		.border-radius(0px);
+		background-color: green;
+	}
+	25%{
+		.rotate(90deg);
+	}
+	50%{
+		.rotate(180deg);
+	}
+	75%{
+		.rotate(270deg);
+	}
+	to{
+		.border-radius(300px);
+	}
+}
+
 // Most popular funcktions
+button{
+	&:hover{
+		-webkit-animation:  btn-main 2s linear 1s 1 normal forwards;
+		-o-animation:  btn-main 2s linear 1s 1 normal forwards;
+		animation:  btn-main 2s linear 1s 1 normal forwards;
+	}
+}
 .border-radius (@px) {
 	-webkit-border-radius: @px;
 	-moz-border-radius: @px;

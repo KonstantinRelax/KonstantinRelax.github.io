@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css">
 <!-- // Add the new slick-theme.css if you want the default styling -->
     <link rel="stylesheet" type="text/css" href="slick-theme.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style11.css">
   </head>
   <body>
@@ -34,7 +35,7 @@
      <container class="head-title">
        <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
-          <p class="title text-center"><span>Smart</span> Agensy Landing Page</p>
+          <p class="title text-center wow bounceIn" data-anim-duration=2s><span>Smart</span> Agensy Landing Page</p>
           <p class="title-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, fuga provident. Libero magni quibusdam labore ad iste saepe hic, maxime qui ipsum tempore beatae, volu tomi ptates doloremque rerum aspernatur dolorum at!</p>
           </div>
         </div>
@@ -70,7 +71,7 @@
             <h2 class="fa fa-magnet"></h2><br>
             <span>Koc Koi Tomi</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-            <button data-toggle="modal" data-target="#modal1"  class="icons-btn" data-toggle="modal" data-target="#modal">
+            <button data-toggle="modal" data-target="#modal1"  class="icons-btn wow" data-toggle="modal" data-target="#modal">
               <div class="btn-text" ><span id="plus"></span><span>+</span> Know More</div>
             </button>
             </div>
@@ -118,7 +119,7 @@
             <div class="gallery-bg">
               <img src="img/effects/1.png" alt="">
               <div class="gallery-object">
-                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button> 
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button wow wow">Visit Gallery</button> 
               </div>
             </div>
           </div>
@@ -126,7 +127,7 @@
             <div class="gallery-bg">
             <img src="img/effects/2.png" alt="">
               <div class="gallery-object">
-                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="wow gallery-button wow">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -134,7 +135,7 @@
             <div class="gallery-bg">
             <img src="img/effects/3.jpg" alt="">
               <div class="gallery-object">
-                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class=" wow gallery-button wow">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -146,7 +147,7 @@
             <div class="gallery-bg">
               <img src="img/effects/2.png" alt="">
               <div class="gallery-object">
-                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button> 
+                <button data-toggle="modal" data-target="#modal1" class="wow gallery-button wow">Visit Gallery</button> 
               </div>
             </div>
           </div>
@@ -154,7 +155,7 @@
             <div class="gallery-bg">
             <img src="img/effects/3.jpg" alt="">
               <div class="gallery-object">
-                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button wow">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -162,7 +163,7 @@
             <div class="gallery-bg">
             <img src="img/effects/1.png" alt="">
               <div class="gallery-object">
-                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button wow">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -174,7 +175,7 @@
             <div class="gallery-bg">
               <img src="img/effects/3.jpg" alt="">
               <div class="gallery-object">
-                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button> 
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button wow">Visit Gallery</button> 
               </div>
             </div>
           </div>
@@ -182,7 +183,7 @@
             <div class="gallery-bg">
             <img src="img/effects/1.png" alt="">
               <div class="gallery-object">
-                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button wow">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -190,7 +191,7 @@
             <div class="gallery-bg">
             <img src="img/effects/2.png" alt="">
               <div class="gallery-object">
-                <button data-toggle="modal" data-target="#modal1" class="gallery-button">Visit Gallery</button>
+                <button data-toggle="modal" data-target="#modal1" class="gallery-button wow">Visit Gallery</button>
               </div>
             </div>
           </div>
@@ -450,7 +451,11 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-     <script type="text/javascript">
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    <script type="text/javascript">
     $(document).ready(function(){
       $('.row-carusel').slick({
           infinite: true,

@@ -5,7 +5,6 @@
     -ms-border-radius: 0px;
     -o-border-radius: 0px;
     border-radius: 0px;
-    background-color: green;
   }
   25% {
     -webkit-transform: rotate(90deg);
@@ -18,6 +17,7 @@
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
+    background-color: green;
   }
   75% {
     -webkit-transform: rotate(270deg);
@@ -26,17 +26,17 @@
     transform: rotate(270deg);
   }
   to {
-    -webkit-border-radius: 300px;
-    -moz-border-radius: 300px;
-    -ms-border-radius: 300px;
-    -o-border-radius: 300px;
-    border-radius: 300px;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    border-radius: 1000px;
   }
 }
 button:hover {
-  -webkit-animation: btn-main 2s linear 1s 1 normal forwards;
-  -o-animation: btn-main 2s linear 1s 1 normal forwards;
-  animation: btn-main 2s linear 1s 1 normal forwards;
+  -webkit-animation: btn-main 0.2s linear 0s 1 normal forwards;
+  -o-animation: btn-main 0.2s linear 0s 1 normal forwards;
+  animation: btn-main 0.2s linear 0s 1 normal forwards;
 }
 .base-form {
   border: none;
@@ -232,8 +232,7 @@ header .report-form .row form {
   margin-top: -70px;
   box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
   background-color: #ffffff;
-  width: 375px;
-  height: 355px;
+  padding: 20px;
 }
 header .report-form .row form p {
   font-family: "open sans", sans-serif;
@@ -269,7 +268,7 @@ header .report-form .row form textarea {
 }
 header .report-form .row form .form-button {
   height: 55px;
-  width: 240px;
+  width: 90%;
   -webkit-border-radius: 70px;
   -moz-border-radius: 70px;
   -ms-border-radius: 70px;

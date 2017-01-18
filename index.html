@@ -49,14 +49,14 @@
       <h2>Unique and Modern Design</h2>
       <p class="header-title">Portfolio For You</p>
       <p class="header-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, molestiae veritatis dolores a, modi, molestias porro quibusdam quas nulla id voluptatem officia eveniet sit repellendus minima eaque tempore ratione sequi.</p>
-      <button class="btn-header">
-        Get Started
-      </button>
+      <a id="scroll" href="#servises"><button class="btn-header">
+      	  Get Started
+      	</button></a>
     </div>
   </div>
 </section>
 
-<section class="servises">
+<section id="servises" class="servises">
 	<div class="container">
 		<div class="row">
 			<div class="colxs-12 servises-header">
@@ -89,6 +89,22 @@
   <script>
   new WOW().init();
   </script> -->
+  <script type="text/javascript">
+  	$(document).ready(function(){
+	$("#scroll").click(function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body').animate({scrollTop: top-75}, 1500);
+	});
+});
+  </script>
 </body>
 
 </html>

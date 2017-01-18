@@ -108,10 +108,11 @@ button:focus {
   color: #4c3326;
 }
 .servises .box:hover {
-  height: 260px;
-  width: 260px;
-  margin-left: 0;
-  font-size: 38px;
+  -webkit-animation: box 1s ease 0s 1 normal forwards;
+  -moz-animation: box 1s ease 0s 1 normal forwards;
+  -ms-animation: box 1s ease 0s 1 normal forwards;
+  -o-animation: box 1s ease 0s 1 normal forwards;
+  animation: box 1s ease 0s 1 normal forwards;
 }
 .servises .box-1 {
   background-image: url(..//img/palette.jpg);
@@ -122,4 +123,14 @@ button:focus {
   background-image: url(..//img/matrix.jpg);
   background-position: center;
   background-size: cover;
+}
+/* анимация для боксов */
+@keyframes box {
+  100% {
+    height: 295px;
+    width: 295px;
+    margin: 0;
+    font-size: 45px;
+    padding-top: 100px;
+  }
 }

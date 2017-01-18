@@ -31,7 +31,6 @@ button{
 			font-weight: 400;
 			color: #fff;
 		}
-
 	}
 	.header-menu{
 		div {
@@ -40,7 +39,6 @@ button{
 		margin-top: 8%;
 		color: #fff;
 		font-size: 14px;
-
 	}
 	.header-bag{
 		.fa{
@@ -63,7 +61,6 @@ button{
 		}
 		.header-description{
 			font-size: 16px;
-
 		}
 		.btn-header{
 			margin-top: 2%;
@@ -83,9 +80,12 @@ button{
 	}
 } /* End of section */ 
 .servises{
+	z-index: 999;
+	overflow: hidden;
 	height: 100vh;
 	margin: 3%;
 	margin-top: 9%;
+	color: white;
 	&-header{
 		font-size: 50px;
 		text-align: center;
@@ -118,13 +118,20 @@ button{
 	.box-1{
 		background-image: url(..//img/palette.jpg);
 		background-position: center;
-		background-size: cover;
+		background-size: cover;		
 	}
 	.box-2{
 		background-image: url(..//img/matrix.jpg);
 		background-position: center;
 		background-size: cover;
 	}
+}
+canvas{
+	position: absolute;	
+	height: 100vh;
+	z-index: -1000;
+	bgc: white;
+	opacity: .9;
 }
 /* анимация для боксов */
 @keyframes box{

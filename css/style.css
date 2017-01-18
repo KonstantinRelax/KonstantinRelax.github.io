@@ -81,9 +81,12 @@ button:focus {
 }
 /* End of section */
 .servises {
+  z-index: 999;
+  overflow: hidden;
   height: 100vh;
   margin: 3%;
   margin-top: 9%;
+  color: white;
 }
 .servises-header {
   font-size: 50px;
@@ -123,6 +126,13 @@ button:focus {
   background-image: url(..//img/matrix.jpg);
   background-position: center;
   background-size: cover;
+}
+canvas {
+  position: absolute;
+  height: 100vh;
+  z-index: -1000;
+  bgc: white;
+  opacity: .9;
 }
 /* анимация для боксов */
 @keyframes box {

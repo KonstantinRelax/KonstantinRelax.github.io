@@ -15,18 +15,37 @@ button:focus {
   text-decoration: none;
   border: none;
 }
+section {
+  height: 100vh;
+}
+.header-section {
+  text-align: center;
+  margin-top: 7%;
+  font-size: 50px;
+  color: #aeaeae;
+  font-family: Raleway;
+}
+.under-header {
+  font-size: 20px;
+}
+canvas {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1999;
+}
 /* site */
-.slider {
+.slider-sec {
   background-image: url(../img/photo.jpg);
   weight: 100vh;
   height: 100vh;
   background-position: center;
   background-size: cover;
 }
-.slider .row {
+.slider-sec .row {
   margin: 0 8%;
 }
-.slider .row .logo {
+.slider-sec .row .logo {
   display: inline;
   margin-top: 7%;
   font-family: Raleway, Sans-serif;
@@ -34,36 +53,36 @@ button:focus {
   font-weight: 400;
   color: #fff;
 }
-.slider .header-menu {
+.slider-sec .header-menu {
   margin-top: 8%;
   color: #fff;
   font-size: 14px;
 }
-.slider .header-menu div {
+.slider-sec .header-menu div {
   text-align: center;
 }
-.slider .header-bag .fa {
+.slider-sec .header-bag .fa {
   color: #fff;
   margin: 0 7px;
   font-size: 16px;
 }
-.slider .main-text {
+.slider-sec .main-text {
   padding: 8%;
   text-align: center;
   font-family: Raleway, Sans-serif;
   color: white;
 }
-.slider .main-text h2 {
+.slider-sec .main-text h2 {
   font-size: 36px;
 }
-.slider .main-text .header-title {
+.slider-sec .main-text .header-title {
   font-weight: 800;
   font-size: 50px;
 }
-.slider .main-text .header-description {
+.slider-sec .main-text .header-description {
   font-size: 16px;
 }
-.slider .main-text .btn-header {
+.slider-sec .main-text .btn-header {
   margin-top: 2%;
   padding: 12px 30px;
   background-color: #998675;
@@ -75,18 +94,16 @@ button:focus {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-.slider .main-text .btn-header:hover,
-.slider .main-text .btn-header:focus {
+.slider-sec .main-text .btn-header:hover,
+.slider-sec .main-text .btn-header:focus {
   text-decoration: none;
 }
 /* End of section */
 .servises {
-  z-index: 999;
-  overflow: hidden;
   height: 100vh;
   margin: 3%;
-  margin-top: 9%;
-  color: white;
+  margin-top: 1%;
+  color: #808080;
 }
 .servises-header {
   font-size: 50px;
@@ -127,12 +144,83 @@ button:focus {
   background-position: center;
   background-size: cover;
 }
-canvas {
+#design {
+  text-align: center;
+}
+#design .fa {
   position: absolute;
-  height: 100vh;
-  z-index: -1000;
-  bgc: white;
-  opacity: .9;
+  font-size: 60px;
+  color: black;
+  margin-top: 130px;
+  z-index: 3;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+#design .fa:hover {
+  color: white;
+  background-color: black;
+  padding: 0;
+}
+#design .fa-chevron-circle-right {
+  right: 0;
+  margin-top: -210px;
+  margin-right: -22px;
+}
+#design .fa-chevron-circle-left {
+  left: 0;
+  margin-top: 140px;
+  margin-left: -21px;
+}
+#design .site {
+  display: inline-block;
+  height: 300px;
+  margin: 25px;
+  border: 2px solid black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+#design .site-mid {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  margin-left: -275px;
+  margin-top: -75px;
+  width: 550px;
+  height: 450px;
+  z-index: 1;
+  -webkit-background-size: 550px;
+}
+#design .site-1 {
+  background: url(..//img/browser-left.jpg);
+}
+#design .site-2 {
+  -webkit-background-image: url(..//img/browser-center.jpg);
+  -moz-background-image: url(..//img/browser-center.jpg);
+  -ms-background-image: url(..//img/browser-center.jpg);
+  -o-background-image: url(..//img/browser-center.jpg);
+  background-image: url(..//img/browser-center.jpg);
+}
+#design .site-3 {
+  background-size: cover;
+  background-image: url(..//img/browser-right.jpg);
+}
+#check {
+  width: 110px;
+  height: 55px;
+  background-color: green;
+  color: white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  z-index: 999;
 }
 /* анимация для боксов */
 @keyframes box {

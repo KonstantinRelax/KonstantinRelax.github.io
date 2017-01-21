@@ -14,8 +14,28 @@ button{
 		border: none;
 	}
 }
+section{
+	height: 100vh;
+}
+.header-section{
+	text-align: center;
+	margin-top: 7%;
+	font-size: 50px;
+	color: #aeaeae;
+	font-family: Raleway;
+}
+.under-header{
+	font-size: 20px;
+}
+canvas{
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: -1999;
+}
+
 /* site */
-.slider {
+.slider-sec {
 	background-image: url(../img/photo.jpg);
 	weight: 100vh;
 	height: 100vh;
@@ -80,12 +100,10 @@ button{
 	}
 } /* End of section */ 
 .servises{
-	z-index: 999;
-	overflow: hidden;
 	height: 100vh;
 	margin: 3%;
-	margin-top: 9%;
-	color: white;
+	margin-top: 1%;
+	color: lighten(black, 50%);
 	&-header{
 		font-size: 50px;
 		text-align: center;
@@ -107,6 +125,7 @@ button{
 		text-align: center;
 		padding-top: 70px;
 		color: #4c3326;
+		
 		&:hover{
 			-webkit-animation: box 1s ease 0s 1 normal forwards;
 			-moz-animation: box 1s ease 0s 1 normal forwards;
@@ -126,12 +145,86 @@ button{
 		background-size: cover;
 	}
 }
-canvas{
-	position: absolute;	
-	height: 100vh;
-	z-index: -1000;
-	bgc: white;
-	opacity: .9;
+#design {
+	text-align: center;
+	
+	.fa{
+		position: absolute;
+		font-size: 60px;
+		color: black; 
+		margin-top: 130px;
+		z-index: 3;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		&:hover{
+			color: white;
+			background-color: black;
+			padding: 0;
+		}
+	}
+	.fa-chevron-circle-right{
+		right: 0;
+		margin-top: -210px;
+		margin-right: -22px;
+	}
+	.fa-chevron-circle-left{
+		left: 0;
+		margin-top: 140px;
+		margin-left: -21px;
+	}
+
+	.site{
+		display: inline-block;
+		height: 300px;
+		margin: 25px;
+		border: 2px solid black;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-ms-border-radius: 10px;
+		-o-border-radius: 10px;
+		border-radius: 10px;
+	}
+	.site-mid{
+		position: absolute;
+		display: inline-block;
+		left: 50%;
+		margin-left: -275px;
+		margin-top: -75px;
+		width: 550px;
+		height: 450px;
+		z-index: 1;
+		-webkit-background-size: 550px;
+	}
+	.site-1{
+		background: url(..//img/browser-left.jpg);	
+	}
+	.site-2{
+		-webkit-background-image: url(..//img/browser-center.jpg);
+		-moz-background-image: url(..//img/browser-center.jpg);
+		-ms-background-image: url(..//img/browser-center.jpg);
+		-o-background-image: url(..//img/browser-center.jpg);
+		background-image: url(..//img/browser-center.jpg);
+	}
+	.site-3{
+		background-size: cover;
+		background-image: url(..//img/browser-right.jpg);
+	}
+
+}
+#check{
+	width: 110px;
+	height: 55px;
+	background-color: green;
+	color: white;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	z-index: 999;
 }
 /* анимация для боксов */
 @keyframes box{
@@ -142,5 +235,6 @@ canvas{
 		margin: 0;
 		font-size: 45px;
 		padding-top: 100px;
+
 	}
 }

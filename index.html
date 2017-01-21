@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 <body>
-<section class="slider">
+
+<section class="slider-sec">
   <div class="row">
     <div class="col-xs-1 logo">
       <img src="img/logos.png" alt="logotype">
@@ -49,39 +50,64 @@
       <h2>Unique and Modern Design</h2>
       <p class="header-title">Portfolio For You</p>
       <p class="header-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, molestiae veritatis dolores a, modi, molestias porro quibusdam quas nulla id voluptatem officia eveniet sit repellendus minima eaque tempore ratione sequi.</p>
-      <a id="scroll" href="#c"><button class="btn-header">
+      <a class="scroll" href="#servises"><button class="btn-header">
       	  Get Started
       	</button></a>
     </div>
   </div>
 </section>
 
-<canvas id="c">
-</canvas>
-	<section id="servises" class="servises">
-		<div class="container">
-			<div class="row">
-				<div class="colxs-12 servises-header">
-					<p>Servises we provide</p>
-				</div>
-			</div>
-			<div class="row">
-				<a href="#"><div class="col-lg-3 box box-1">
-					<p>Разработка дизайна</p>
-				</div></a>
-				<a href="#"><div class="col-lg-3 box box-2">
-					<p>Функционал</p>
-				</div></a>
-				<a href="#"><div class="col-lg-3 box box-3"></div></a>
-				<a href="#"><div class="col-lg-3 box box-4"></div></a>
+<section id="servises" class="servises">
+    <div id="cover"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 header-section">
+				<p>Servises we provide</p>
 			</div>
 		</div>
-	</section>
+		<div class="row">
+			<a href="#design" class='scroll'><div class="col-lg-3 box box-1">
+				<p>Сторонние Библиотеки</p>
+			</div></a>
+			<a href="#canvas-sec" class='scroll'><div class="col-lg-3 box box-2">
+				<p>Канвас</p>
+			</div></a>
+			<a href="#"><div class="col-lg-3 box box-3"></div></a>
+			<a href="#"><div class="col-lg-3 box box-4"></div></a>
+		</div>
+	</div>
+</section>
 
+<section id="design">
+	<div class="container">
+	<div class="row">
+		<div class="col-xs-12 header-section">При необходимости использование сторонних библиотек</div>
+	</div>
+		<div class="row sites" > 
+			<div class="col-md-4 site site-1" value=1></div>
+			<div class="col-md-4 site site-2" value=2></div>
+			<div class="col-md-4 site site-3" value=3></div>
+			<div class="col-md-4 site site-1" value=1></div>
+			<div class="col-md-4 site site-2" value=2></div>
+			<div class="col-md-4 site site-3" value=3></div>
+		</div>
+	</div>
+</section>
+
+<section id="canvas-sec">
+	<div class="container">
+		<canvas id="canvas"></canvas>
+		<div class="row">
+			<div class="col-xs-12 header-section">Решим задачку?</div>
+			<div class="col-xs-12 under-header">Расположите числа так, чтобы равенство оказалось верным</div>
+		</div>
+		<button id="check">Проверить себя!</button> 
+
+	</div>
+</section>
       
   
   
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script> 
@@ -94,104 +120,65 @@
   </script> -->
   <script type="text/javascript">
   	$(document).ready(function(){
-	$("#scroll").click(function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
+		$(".scroll").click(function (event) {
+			//отменяем стандартную обработку нажатия по ссылке
+			event.preventDefault();
+			//забираем идентификатор бока с атрибута href
+			var id  = $(this).attr('href'),
 
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;
-		
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body').animate({scrollTop: top}, 1500);
+			//узнаем высоту от начала страницы до блока на который ссылается якорь
+				top = $(id).offset().top,
+				dtop = $(id).css('margin-top');
+
+			top = parseInt(top) - parseInt(dtop);
+			
+			//анимируем переход на расстояние - top за 1500 мс
+			$('body').animate({scrollTop: top}, 1500);
+		});
 	});
-});
+  </script>
+  <script type='text/javascript'>
+  	$(document).ready(function(){
+  		$('.sites').slick({
+  			infinite: true,
+  			slidesToShow: 3,
+  			slidesToScroll: 1,
+  			autoplay: true,
+  			autoplaySpeed: 2000,
+ 			nextArrow: '<i class="fa fa-chevron-circle-right col-xs-1" aria-hidden="true"></i>',
+        	prevArrow: '<i class="fa fa-chevron-circle-left col-xs-1" aria-hidden="true"></i>',
+  		})
+	});
   </script>
   <script>
-  	var w = c.width = window.innerWidth,
-    h = c.height = window.innerHeight,
-    ctx = c.getContext('2d'),
-    
-    spawnProb = 1,
-    numberOfMoves = [8, 16], //[min, max]
-    distance = [50, 200],
-    attenuator = 900,
-    timeBetweenMoves = [6, 10],
-    size = [.5, 3],
-    
-    lines = [],
-    frame = (Math.random()*360)|0;
+  	var a = Math.round(Math.random()*20),
+  		b =	Math.round(Math.random()*20),
+  		sum = a+b,
+  		a1 = -20,
+  		b1 = -30,
+  		sum1 = -100;
+  	
+  	
 
-function rand(ar){
-  return Math.random() * (ar[1] - ar[0]) + ar[0];
-}
-function Line(){
-  this.x = Math.random() * w;
-  this.y = Math.random() * h;
-  this.vx = this.vy = 0;
-  this.last = {};
-  this.target = {};
-  this.totalMoves = rand(numberOfMoves);
-  this.move = 0;
-  this.timeBetweenMoves = rand(timeBetweenMoves);
-  this.timeSpentThisMove = this.timeBetweenMoves;
-  this.distance = rand(distance);
-  
-  this.color = 'hsl(hue, 80%, 50%)'.replace('hue', frame%360);
-  
-  this.size = rand(size);
-}
-Line.prototype.use = function(){
-  ++this.timeSpentThisMove;
-  if(this.timeSpentThisMove >= this.timeBetweenMoves){
-    ++this.move;
-    this.timeSpentThisMove = 0;
-    
-    var rad = Math.random() * 2 * Math.PI;
-    this.target.x = this.x + Math.cos(rad) * this.distance;
-    this.target.y = this.y + Math.sin(rad) * this.distance;
-  }
-  
-  this.last.x = this.x;
-  this.last.y = this.y;
-  
-  this.vx += (this.x - this.target.x)/attenuator;
-  this.vy += (this.y - this.target.y)/attenuator;
-  
-  this.x += this.vx;
-  this.y += this.vy;
-  
-  ctx.lineWidth = this.size;
-  ctx.strokeStyle = ctx.shadowColor = this.color;
-  ctx.beginPath();
-  ctx.moveTo(this.last.x, this.last.y);
-  ctx.lineTo(this.x, this.y);
-  ctx.stroke();
-}
+  	function isRight(){
+  	 	if (sum1 == a1+b1){
+  	 		alert('Верно!');
+  	 	} else{
+  	 		alert('Ошибка!');
+  	 	}
+  	}
 
-function anim(){
-  window.requestAnimationFrame(anim);
-  
-  ++frame;
-  
-  ctx.shadowBlur = 0;
-  ctx.fillStyle = 'rgba(0, 0, 0, .04)';
-  ctx.fillRect(0, 0, w, h);
-  ctx.shadowBlur = 20;
-  
-  if(Math.random() < spawnProb) lines.push(new Line);
-  
-  for(var i = 0; i < lines.length; ++i){
-    lines[i].use();
-    
-    if(lines[i].move >= lines[i].totalMoves){
-      lines.splice(i, 1);
-      --i;
-    }
-  }
-}
-anim();
+ 	
+  	
+  	
+  	$('#check').click(function() {
+  		isRight();
+  	})
+
+
+
+  	
+
   </script>
 </body>
 

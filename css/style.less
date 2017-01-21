@@ -8,6 +8,7 @@ a{
 	}
 }
 button{
+	display: block;
 	text-decoration: none;
 	&:focus{
 		text-decoration: none;
@@ -15,7 +16,7 @@ button{
 	}
 }
 section{
-	height: 100vh;
+	min-height: 100vh;
 }
 .header-section{
 	text-align: center;
@@ -27,11 +28,52 @@ section{
 .under-header{
 	font-size: 20px;
 }
-canvas{
+.boxForBox{
+  border: 1px solid black; 
+  position: relative;
+  
+  
+
+  
+}
+.numBox{
+	font-size: 25px;
+	text-align: center;
+	padding: 10px;
+	position: relative;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-color: yellow;
+	margin: 3px;
+	border: 1px solid black;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	-ms-border-radius: 14px;
+	-o-border-radius: 14px;
+	border-radius: 14px;
+}
+.dropBox{
 	position: absolute;
-	height: 100vh;
-	width: 100vw;
-	z-index: -1999;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	z-index: 20;
+	background-color: #aeaeae;
+	opacity: 0;
+}
+.dBox-1{
+	left: 155px;
+	margin-top: 50px;
+}
+.dBox-2{
+	left: 240px;
+	margin-top: 50px;
+}
+.dBox-3{
+	left: 325px;
+	margin-top: 50px;
 }
 
 /* site */
@@ -214,7 +256,7 @@ canvas{
 	}
 
 }
-#check{
+#canvas-sec .container button.btn-canvas{
 	width: 110px;
 	height: 55px;
 	background-color: green;
@@ -235,6 +277,12 @@ canvas{
 		margin: 0;
 		font-size: 45px;
 		padding-top: 100px;
-
 	}
+}
+.red{
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-ms-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }

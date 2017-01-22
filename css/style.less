@@ -1,4 +1,11 @@
+/* colors */
+
 /* main settings */
+body{
+	background-image: url(../img/backgrownd.jpg);
+	background-repeat: none;
+	background-size: cover;
+}
 a{
 	text-decoration: none;
 	color: white;
@@ -18,24 +25,24 @@ button{
 section{
 	min-height: 100vh;
 }
+canvas{
+	position: absolute;
+	
+	left: 0;
+	z-index: 2;
+}
 .header-section{
 	text-align: center;
 	margin-top: 7%;
 	font-size: 50px;
-	color: #aeaeae;
+	color: 0000ff;
 	font-family: Raleway;
 }
 .under-header{
 	font-size: 20px;
 }
-.boxForBox{
-  border: 1px solid black; 
-  position: relative;
-  
-  
 
-  
-}
+
 .numBox{
 	font-size: 25px;
 	text-align: center;
@@ -58,21 +65,24 @@ section{
 	display: inline-block;
 	height: 50px;
 	width: 50px;
-	border: 1px solid black;
+	border: none;
 	z-index: 20;
-	background-color: #aeaeae;
-	opacity: 0;
+	background-color: yellow;
+	color: black;
+	font-size: 25px;
+	text-align: center;
+	padding: 5px;
 }
 .dBox-1{
-	left: 155px;
+	left: 50px;
 	margin-top: 50px;
 }
 .dBox-2{
-	left: 240px;
+	left: 135px;
 	margin-top: 50px;
 }
 .dBox-3{
-	left: 325px;
+	left: 220px;
 	margin-top: 50px;
 }
 
@@ -91,7 +101,7 @@ section{
 			font-family: Raleway, Sans-serif;
 			font-size: 34px;
 			font-weight: 400;
-			color: #fff;
+			color: #00005f;
 		}
 	}
 	.header-menu{
@@ -113,7 +123,7 @@ section{
 		padding: 8%;
 		text-align: center;
 		font-family: Raleway, Sans-serif;
-		color: white;
+		color: #00005f;
 		h2{
 			font-size: 36px;
 		}
@@ -125,6 +135,8 @@ section{
 			font-size: 16px;
 		}
 		.btn-header{
+			display: inline-block;
+			
 			margin-top: 2%;
 			padding: 12px 30px;
 			background-color: #998675;
@@ -141,11 +153,12 @@ section{
 		}
 	}
 } /* End of section */ 
+
 .servises{
 	height: 100vh;
-	margin: 3%;
 	margin-top: 1%;
 	color: lighten(black, 50%);
+	text-align: center;
 	&-header{
 		font-size: 50px;
 		text-align: center;
@@ -153,15 +166,16 @@ section{
 		margin-bottom: 2%;
 	}
 	.box{
-		margin: 3%;
+		display: inline-block;
+		margin: 2%;
 		height: 220px;
 		width: 220px;
 		border: 3px solid #000;
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
-		-ms-border-radius: 50%;
-		-o-border-radius: 50%;
-		border-radius: 50%;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		-ms-border-radius: 100%;
+		-o-border-radius: 100%;
+		border-radius: 100%;
 		font-style: italic;
 		font-size: 30px;
 		text-align: center;
@@ -278,11 +292,4 @@ section{
 		font-size: 45px;
 		padding-top: 100px;
 	}
-}
-.red{
-	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	-ms-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	-o-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }

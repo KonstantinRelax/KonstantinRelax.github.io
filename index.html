@@ -109,9 +109,8 @@
 		<a href="#" id="check"><div class = 'btn-canvas'>Проверить себя!</div></a> 
 		<a href="#" id='start'><div class = 'btn-canvas'>Стартовать</div></a>
 		<a href="#" id='order'><div class = 'btn-canvas'>навести порядок</div></a>
-		<div id="record">
-			
-		</div>
+		<div id="record">15	</div>
+		<div id="time">15	</div>
 
 	</div>
 </section>
@@ -185,8 +184,8 @@
   <script>
   	var a = Math.round(Math.random()*20),
   		b =	Math.round(Math.random()*20),
-  		recordTime = new Date();
-  		timeOn = new Date();
+  		recordTime = new Date(9999);
+  		timeOn = new Date;
   		diff = 5, /*максимальное значение числа*/
   		sum = a+b, /*необходимые блоки*/
   		a1 = -20,
@@ -214,21 +213,26 @@
   	}
 
   	/*проверить установление рекорда и записать новый рекорд*/
+  
+
   	function isRecord(time){
-  		var oldRecord = $('#record').text();
-  		if(time<oldRecord){
-  			alert('Новый рекорд: ' + time);
-  			$('#record').text(time);
+  		if(time<recordTime){
+  			recordTime = time;
+  			alert('Новый рекорд!!!');
+  		} else{
+  			alert('Затрачено на решение: ' + time/1000 + 'секунд');
   		}
+  			$('#record').text('Рекорд ' + recordTime/1000 + ' секунд');
+  			$('#time').text('Затрачено ' + time/1000 + ' секунд');
   	}
 
  /*Та самая кнопка*/
   	$('#check').click(function(event) {
   		event.preventDefault();
   		if(isRight()){
+  			timeOn = - timeOn + Date.now();
   			$('.dropBox').css('background-color', 'green');
   			alert('Верно!');
-  			timeOn = timeOn - Date();
   			isRecord(timeOn);
   		} else{
   			$('.dropBox').css('background-color', 'red');
@@ -253,7 +257,8 @@
 			var box = '.nbox-' + i;
 			$(box).css({"top":y, "left": x});
 		}
-		timeOn = Date();
+		timeOn = Date.now();
+
  	})
  	/*Кнопка наведения порядка*/
  	$('#order').click(function(event){

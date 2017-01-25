@@ -26,11 +26,12 @@
 
 <section class="slider-sec">
   <div class="row">
-    <div class="col-xs-1 logo">
-      <img src="img/logos.png" alt="logotype">
+    <div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0 logo">
+	    <div>
+	      <img src="img/logo.png" alt="logotype">
+	    	Relax
+	    </div>
     </div>
-    <div class="col-lg-1 logo">Relax</div>
-  
   
   </div> <!-- row -->
   <div class="row main-text">
@@ -38,9 +39,9 @@
       <h2>Это всего лишь пример моей работы...</h2>
       <p class="header-title">Давайте работать вместе!</p>
       <p class="header-description">На данном сайте представлены лишь крохи чудесных возможностей HTML5/CSS3, Bootstrap-3, JavaScript, его феймворка JQuery и библиотеки UI, canvas и прочего ;) Мои контакты есть в footer'е. До связи!</p>
-      <a class="scroll" href="#servises"><button class="btn-header">
+      <a class="scroll" href="#servises"><div class="btn-canvas">
       	 Начать знакомство!
-      	</button></a>
+      	</div></a>
     </div>
   </div>
 </section>
@@ -55,13 +56,13 @@
 		</div>
 		<div class="row">
 			<a href="#design" class='scroll'><div class="col-lg-3 col-xs-2 box box-1">
-				<p>Сторонние Библиотеки</p>
+				<p>Slider</p>
 			</div></a>
 			<a href="#canvas-sec" class='scroll'><div class="col-lg-3 col-xs-2 box box-2">
-				<p>Канвас</p>
+				<p>Drag&Drop</p>
 			</div></a>
 			<a href="#"><div class="col-lg-3 col-xs-2 box box-3"></div></a>
-			<a href="#"><div class="col-lg-3 col-xs-2 box box-4"></div></a>
+			<a href="footer" class='scroll'><div class="col-lg-3 col-xs-2 box box-4">We Are</div></a>
 		</div>
 	</div>
 </section>
@@ -105,15 +106,25 @@
 			<div class="numBox nbox-2"></div>
 			<div class="numBox nbox-1"></div>
 
-		<button id="check" class = 'btn-canvas'>Проверить себя!</button> 
-		<button id='start' class = 'btn-canvas'>Стартовать</button>
-		<button id='order' class = 'btn-canvas'>навести порядок</button>
+		<a href="#" id="check"><div class = 'btn-canvas'>Проверить себя!</div></a> 
+		<a href="#" id='start'><div class = 'btn-canvas'>Стартовать</div></a>
+		<a href="#" id='order'><div class = 'btn-canvas'>навести порядок</div></a>
+		<div id="record">
+			
+		</div>
 
 	</div>
 </section>
 
 <footer>
-	
+	<div class="container">
+		<div class="col-sm-6 col-xs-12">
+			<div class="footer-box"><img src="img/trubka.png" alt="" class="footer-icon"><a href=""><span class="footer-img"></span></a></div>
+		</div>
+		<div class="col-sm-6 col-xs-12">
+			<div class="footer-box"><img src="img/pochtawp.jpg" alt="" class="footer-icon"><a href=""><span class="footer-img"></span></a></div>
+		</div>
+	</div>
 </footer>
       
   
@@ -174,6 +185,8 @@
   <script>
   	var a = Math.round(Math.random()*20),
   		b =	Math.round(Math.random()*20),
+  		recordTime = new Date();
+  		timeOn = new Date();
   		diff = 5, /*максимальное значение числа*/
   		sum = a+b, /*необходимые блоки*/
   		a1 = -20,
@@ -183,6 +196,7 @@
   		plusSize = 15, /*длины плюса*/
   		equalSize = 3, /*толщина знака равно*/
   		sum1 = -10; /*сумма вариантов обучающегося*/
+
   	
 
 
@@ -199,19 +213,32 @@
   	 	}
   	}
 
-  	
+  	/*проверить установление рекорда и записать новый рекорд*/
+  	function isRecord(time){
+  		var oldRecord = $('#record').text();
+  		if(time<oldRecord){
+  			alert('Новый рекорд: ' + time);
+  			$('#record').text(time);
+  		}
+  	}
+
  /*Та самая кнопка*/
-  	$('#check').click(function() {
+  	$('#check').click(function(event) {
+  		event.preventDefault();
   		if(isRight()){
   			$('.dropBox').css('background-color', 'green');
   			alert('Верно!');
+  			timeOn = timeOn - Date();
+  			isRecord(timeOn);
   		} else{
   			$('.dropBox').css('background-color', 'red');
   			alert('Ошибка!');
   		}
+
   	})
  /*Кнопка для старта*/
- 	$('#start').click(function(){
+ 	$('#start').click(function(event){
+ 		event.preventDefault();
  		$('.numBox').draggable('enable');
  		$('.numBox').css({'position': 'relative'});
 
@@ -226,9 +253,11 @@
 			var box = '.nbox-' + i;
 			$(box).css({"top":y, "left": x});
 		}
+		timeOn = Date();
  	})
  	/*Кнопка наведения порядка*/
- 	$('#order').click(function(){
+ 	$('#order').click(function(event){
+ 		event.preventDefault();
  		$('.temp').draggable('disable');
  		$('.temp').show();
  		$('.dropBox').text('');

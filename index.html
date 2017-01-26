@@ -185,7 +185,7 @@
   <script>
   	var a = Math.round(Math.random()*20),
   		b =	Math.round(Math.random()*20),
-  		recordTime = new Date(9999);
+  		recordTime = new Date(9991);
   		timeOn = new Date;
   		diff = 5, /*максимальное значение числа*/
   		sum = a+b, /*необходимые блоки*/
@@ -213,18 +213,30 @@
   	 	}
   	}
 
-  	/*проверить установление рекорда и записать новый рекорд*/
-  
+  	/*определить падеж секунд*/
+  	function endSeconds(time){
+  		var end = 0;
+  		if ((time % 10 == 1)&&((time % 100) / 10) != 1){
+  			end = ' секунда';
+  		} else if ((time % 10 == 2)&&((time % 100) / 10) != 1){
+  			end = ' секунды';
+  		} else {
+  			end = ' секунд';
+  		}
+  		return end;
+  	}
 
+  	/*проверить установление рекорда и записать новый рекорд*/
   	function isRecord(time){
-  		if(time<recordTime){
+		
+  		if (time < recordTime){
   			recordTime = time;
   			alert('Новый рекорд!!!');
   		} else{
-  			alert('Затрачено на решение: ' + time/1000 + 'секунд');
+  			alert('Затрачено на решение: ' + time/1000 + endSeconds(time));
   		}
-  			$('#record').text('Рекорд ' + recordTime/1000 + ' секунд');
-  			$('#time').text('Затрачено ' + time/1000 + ' секунд');
+  			$('#record').text('Рекорд ' + recordTime/1000 + endSeconds(recordTime));
+  			$('#time').text('Затрачено ' + time/1000 + endSeconds(time));
   	}
 
  /*Та самая кнопка*/
@@ -245,6 +257,7 @@
  	$('#start').click(function(event){
  		event.preventDefault();
  		$('.numBox').draggable('enable');
+ 		$('.numBox').show();
  		$('.numBox').css({'position': 'relative'});
 
  		$('.dropBox').text('');

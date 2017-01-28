@@ -121,13 +121,13 @@
 		<div class="col-sm-6 col-xs-12 footer-left">
 			<img src="img/trubka.png" alt="" class="vk-logo"></img>
 			<img src="img/number.png" class ='number' alt="89823170272">
-			<form id='reply' action="php/mail.php">
+			<form id='reply' action="php/mail.php" method="post">
 				<input type="text" name = 'uname' class='form-input' placeholder
 ='Тут вводить свое имя'>
 				<input type="text" name = 'phone' id='phoneNumber' class='form-input' placeholder
 ='Тут вводить телефон' >
 				<textarea type="text" name = 'msg' class='form-input' placeholder='Оставляйте отзыв здесь' rows=5>Превосходный сайт! </textarea>
-				<a href="#" type="submit" formaction='php/mail.php' id='post'><div class = 'btn-canvas'>отправить отзыв</div></a>
+				<input type="submit" formaction='php/mail.php' id='post' value='отправить отзыв' class="btn-canvas">
 			</form>
 		</div>
 		<div class="col-sm-6 col-xs-12 footer-right">

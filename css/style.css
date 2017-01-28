@@ -327,8 +327,24 @@ footer .footer-right a img.vk {
 footer .footer-left .number {
   margin-top: 5%;
   display: block;
-  width: 45vw;
+  width: 34vw;
   font-size: 35px;
+  position: relative;
+  left: 50%;
+  margin-left: -17vw;
+}
+footer .footer-left .form-input {
+  border: none;
+  display: block;
+  margin: 3% 5%;
+  width: 30vw;
+  left: 50%;
+  position: relative;
+  margin-left: -15vw;
+}
+footer .footer-left .form-input:focus {
+  border: none;
+  text-decoration: none;
 }
 /* анимация для боксов */
 @keyframes box {

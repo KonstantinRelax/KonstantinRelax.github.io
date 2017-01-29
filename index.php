@@ -32,12 +32,15 @@
 	    	Relax
 	    </div>
     </div>
-  
   </div> <!-- row -->
   <div class="row main-text">
     <div class="col-lg-12 ">
       <h2>Это всего лишь пример моей работы...</h2>
       <p class="header-title">Давайте работать вместе!</p>
+<?php	
+	echo "<h1>ссусксусус</h1>";
+?>
+  
       <p class="header-description">На данном сайте представлены лишь крохи чудесных возможностей HTML5/CSS3, Bootstrap-3, JavaScript, его феймворка JQuery и библиотеки UI, canvas и прочего ;) Мои контакты есть в footer'е. До связи!</p>
       <a class="scroll" href="#servises"><div class="btn-canvas">
       	 Начать знакомство!
@@ -122,12 +125,25 @@
 			<img src="img/trubka.png" alt="" class="vk-logo"></img>
 			<img src="img/number.png" class ='number' alt="89823170272">
 			<form id='reply' action="php/mail.php" method="post">
-				<input type="text" name = 'uname' class='form-input' placeholder
-='Тут вводить свое имя'>
-				<input type="text" name = 'phone' id='phoneNumber' class='form-input' placeholder
-='Тут вводить телефон' >
-				<textarea type="text" name = 'msg' class='form-input' placeholder='Оставляйте отзыв здесь' rows=5>Превосходный сайт! </textarea>
-				<input type="submit" formaction='php/mail.php' id='post' value='отправить отзыв' class="btn-canvas">
+				<input type  = "text" 
+					   name  = 'uname' 
+					   class = 'form-input' 
+					   placeholder = 'Тут вводить свое имя' required>
+				<input type  = "text" 
+					   name  = 'phone' 
+					   id = 'phoneNumber' 
+					   class = 'form-input' 
+					   placeholder='Тут вводить телефон' required>
+				<textarea type="text" 
+					   name = 'msg' 
+					   class='form-input' 
+					   placeholder='Оставляйте отзыв здесь' 
+					   rows=5></textarea>
+				<input type="submit" 
+					   formaction='php/mail.php' 
+					   id='post' 
+					   value='отправить отзыв' 
+					   class="btn-canvas">
 			</form>
 		</div>
 		<div class="col-sm-6 col-xs-12 footer-right">

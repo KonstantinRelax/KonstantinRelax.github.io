@@ -197,7 +197,7 @@
 		<a href="#0" class="modal-close">Close</a>
 	</div> <!-- cd-modal -->
 
-	<div class="cd-cover-layer"></div> <!-- .cd-cover-layer --> 
+	<div class="cd-cover-layer"></div> .cd-cover-layer 
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -209,13 +209,13 @@
   <script src='js/parallax.min.js'></script>
   <script src='js/main.js'></script>
   <script src='js/snap.svg-min.js'></script>
-  <!--
   WOW-connect 
   <script src="js/wow.min.js"></script>
   <script>
   new WOW().init();
-  </script> -->
+  </script>
   <script type="text/javascript">
+  /*Здесь лежат скрипты, запускающиеся по загрузке страницы, за исключением рисования*/
   	$(document).ready(function(){
 		$(".scroll").click(function (event) {
 			//отменяем стандартную обработку нажатия по ссылке
@@ -232,6 +232,7 @@
 			//анимируем переход на расстояние - top за 1500 мс
 			$('body').animate({scrollTop: top}, 1500);
 		});
+		/*Обеспечение работы секции сервисес*/
 		$(".info-box").fadeOut();
 		$(".fadeIn").fadeIn();
 		$('.box-1').mouseenter(function(){
@@ -275,10 +276,10 @@
 
 	});
   </script>
-  <script>
+  <!-- <script>
   	$('#phoneNumber').mask("+7 (999)-999-99-99");
- 
-  </script>
+   
+  </script> -->
 
   <script type='text/javascript'>
   	$(document).ready(function(){

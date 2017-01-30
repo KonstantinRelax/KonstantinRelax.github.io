@@ -238,7 +238,7 @@
 		$(".info-box").fadeOut();
 		$(".fadeIn").fadeIn();
 		$('.box-1').mouseenter(function(){
-			$(".fadeIn").fadeOut();
+			$(".fadeIn").fadeOut('0');
 			$('#info-box-1').fadeIn();
 		});
 		$('.box-1').mouseleave(function(){
@@ -246,7 +246,7 @@
 			$('#info-box-1').fadeOut('10');
 		});
 		$('.box-2').mouseenter(function(){
-			$(".fadeIn").fadeOut();
+			$(".fadeIn").fadeOut('0');
 			$('#info-box-2').fadeIn();
 		});
 		$('.box-2').mouseleave(function(){
@@ -254,7 +254,7 @@
 			$('#info-box-2').fadeOut('10');
 		});
 		$('.box-3').mouseenter(function(){
-			$(".fadeIn").fadeOut();
+			$(".fadeIn").fadeOut('0');
 			$('#info-box-3').fadeIn();
 		});
 		$('.box-3').mouseleave(function(){
@@ -262,7 +262,7 @@
 			$('#info-box-3').fadeOut('10');
 		});
 		$('.box-4').mouseenter(function(){
-			$(".fadeIn").fadeOut();
+			$(".fadeIn").fadeOut('0');
 			$('#info-box-4').fadeIn();
 		});
 		$('.box-4').mouseleave(function(){
@@ -295,13 +295,22 @@
         	prevArrow: '<i class="fa fa-chevron-circle-left col-xs-1" aria-hidden="true"></i>',
         	responsive: [
         	{
-		      	breakpoint: 990,
+		      	breakpoint: 992,
 		      	settings: {
 		        	slidesToShow: 2,
 		        	slidesToScroll: 1
 		        }
 		 
-		    }]
+		    },
+		    {
+		      	breakpoint: 768,
+		      	settings: {
+		        	slidesToShow: 1,
+		        	slidesToScroll: 1
+		        }
+		 
+		    }
+		    ]
 		  
   		})
 	});

@@ -24,7 +24,11 @@
   </head>
 <body>
 
-<section class="slider-sec">
+<section class="slider-sec parallax-window" 
+		 data-parallax="scroll" 
+		 data-image-src="img/photo.jpg"
+		 data-speed='0.5'
+		 data-z-index = '0'>
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0 logo">
 	    <div>
@@ -63,6 +67,11 @@
 			<a href="#"><div class="col-lg-3 col-xs-2 box box-3"></div></a>
 			<a href="footer" class='scroll'><div class="col-lg-3 col-xs-2 box box-4">We Are</div></a>
 		</div>
+		<p class="info-box fadeIn">C parallax.js и его фреймворком scroll Вы уже познакомились) Для получения информации о других наших возможностях наведите курсор на изображение</p>
+		<p id="info-box-1" class="info-box">Слайдеры - удобные и гибко настраиваемые. В данной секции находится слайдер, построеннsй с использованием библиотеки slick и адаптивно настроенный.</p>
+		<p id="info-box-2" class="info-box">В этой секции мы приоткрыли завесу над работой с JQuery и UI, создав небольшую игру на этих фреймворках</p>
+		<p id="info-box-3" class="info-box"></p>
+		<p id="info-box-4" class="info-box">В footer'e Вы обнаружите контакты, по которым с нами можно связаться</p>
 	</div>
 </section>
 
@@ -115,32 +124,36 @@
 	</div>
 </section>
 
-<footer>
+<footer  class="parallax-window" 
+		 data-parallax="scroll" 
+		 data-image-src="img/photo.jpg"
+		 data-speed='0.5'
+		 data-z-index = '0'>>
 	<div class="container">
 		<div class="col-sm-6 col-xs-12 footer-left">
 			<img src="img/trubka.png" alt="" class="vk-logo"></img>
 			<img src="img/number.png" class ='number' alt="89823170272">
-			<form id='reply' action="smart02.php" method="post">
-				<input type  = "text" 
-					   name  = 'uname' 
-					   class = 'form-input' 
-					   placeholder = 'Тут вводить свое имя' required>
-				<input type  = "text" 
-					   name  = 'phone' 
-					   id = 'phoneNumber' 
-					   class = 'form-input' 
-					   placeholder='Тут вводить телефон' required>
-				<textarea type="text" 
-					   name = 'msg' 
-					   class='form-input' 
-					   placeholder='Оставляйте отзыв здесь' 
-					   rows=5></textarea>
-				<input type="submit" 
-					   formaction='php/mail.php' 
-					   id='post' 
-					   value='отправить отзыв' 
-					   class="btn-canvas">
-			</form>
+<!-- 			<form id='reply' action="smart02.php" method="post">
+	<input type  = "text" 
+		   name  = 'uname' 
+		   class = 'form-input' 
+		   placeholder = 'Тут вводить свое имя' required>
+	<input type  = "text" 
+		   name  = 'phone' 
+		   id = 'phoneNumber' 
+		   class = 'form-input' 
+		   placeholder='Тут вводить телефон' required>
+	<textarea type="text" 
+		   name = 'msg' 
+		   class='form-input' 
+		   placeholder='Оставляйте отзыв здесь' 
+		   rows=5></textarea>
+	<input type="submit" 
+		   formaction='php/mail.php' 
+		   id='post' 
+		   value='отправить отзыв' 
+		   class="btn-canvas">
+</form> -->
 		</div>
 		<div class="col-sm-6 col-xs-12 footer-right">
 			<img src="img/vk-logo.png" alt="" class='vk-logo'>
@@ -160,6 +173,9 @@
   <script src='js/mask.min.js'></script>	
   <script type="text/javascript" src="js/slick.min.js"></script> 
   <script src="js/bootstrap.min.js"></script>
+  <script src='js/jquery.parallax.js'></script>
+  <script src='js/parallax.min.js'></script>
+
   <!--
   WOW-connect 
   <script src="js/wow.min.js"></script>
@@ -183,6 +199,34 @@
 			//анимируем переход на расстояние - top за 1500 мс
 			$('body').animate({scrollTop: top}, 1500);
 		});
+		$(".info-box").fadeOut();
+		$(".fadeIn").fadeIn();
+		$('.box-1').mouseenter(function(){
+			$('#info-box-1').fadeIn();
+		});
+		$('.box-1').mouseleave(function(){
+			$('#info-box-1').fadeOut('100');
+		});
+		$('.box-2').mouseenter(function(){
+			$('#info-box-2').fadeIn();
+		});
+		$('.box-2').mouseleave(function(){
+			$('#info-box-2').fadeOut('100');
+		});
+		$('.box-3').mouseenter(function(){
+			$('#info-box-3').fadeIn();
+		});
+		$('.box-3').mouseleave(function(){
+			$('#info-box-3').fadeOut('100');
+		});
+		$('.box-4').mouseenter(function(){
+			$('#info-box-4').fadeIn();
+		});
+		$('.box-4').mouseleave(function(){
+			$('#info-box-4').fadeOut('100');
+		});
+		
+
 	});
   </script>
   <script>

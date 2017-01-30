@@ -21,7 +21,7 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'monologic.loggy@mail.ru';                 // SMTP username
+$mail->Username = 'monologic.loggy';                 // SMTP username
 $mail->Password = 'monologic74';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
@@ -38,11 +38,11 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Форма на сайте';
 $mail->Body    = $msg;
-$mail->AltBody = 'Это сообщение в формате plain text';
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+   // echo 'Message could not be sent.';
+    //echo 'Mailer Error: ' . $mail->ErrorInfo;
+    header('location: ../thanks.html');
 } else {
     header('location: ../thanks.html'); 
 }

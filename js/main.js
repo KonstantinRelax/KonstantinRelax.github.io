@@ -49,6 +49,11 @@ jQuery(document).ready(function(){
 			coverLayer.removeClass('modal-is-visible');
 			animateModal(pathsArray, pathSteps, duration, 'close');
 		});
+		$('body').keydown(function(e){
+			if (e.keyCode === 27){
+				$('.modal-close').click();
+			}
+		})
 	}
 
 	function animateModal(paths, pathSteps, duration, animationType) {

@@ -67,7 +67,7 @@ canvas{
 	font-family: Raleway;
 }
 .under-header{
-	font-size: 20px;
+	font-size: 25px;
 }
 
 
@@ -160,7 +160,7 @@ canvas{
 		.header-title{
 			font-weight: 800;
 			font-size: 50px;
-			margin: 0;
+			margin: 0%;
 		}
 		.header-description{
 			font-size: 16px;
@@ -214,11 +214,11 @@ canvas{
 		background-position: center;
 		background-size: cover;		
 		&:hover{
-			-webkit-animation: box 1s ease 0s 1 normal forwards;
-			-moz-animation: box 1s ease 0s 1 normal forwards;
-			-ms-animation: box 1s ease 0s 1 normal forwards;
-			-o-animation: box 1s ease 0s 1 normal forwards;
-			animation: box 1s ease 0s 1 normal forwards;
+			-webkit-animation: box .1s ease 0s 1 normal forwards;
+			-moz-animation: box .1s ease 0s 1 normal forwards;
+			-ms-animation: box .1s ease 0s 1 normal forwards;
+			-o-animation: box .1s ease 0s 1 normal forwards;
+			animation: box .1s ease 0s 1 normal forwards;
 		}
 	}
 	.box-1{
@@ -315,9 +315,6 @@ canvas{
 	background-color: blue;
 	color: white;
 }
-#worldRecord{
-	display: none;
-}
 .btn-canvas{
 	width: 150px;
 	height: 80px;
@@ -331,12 +328,12 @@ canvas{
 }
 footer{
 	background-image: url(../img/photo-pre-footer.jpg);
+	img{
+		display: inline-block;		
+	}
 	.vk-logo{
 		position: relative;
-		margin-top: 5vh;
-		height: 70px;
-		left: 50%;
-		margin-left: -35px;
+		height: 70px;	
 	}	
 	.footer-right{
 		a{
@@ -357,6 +354,18 @@ footer{
 				border-radius: 30%;
 			}
 		}
+
+	}
+	.footer-left{
+		
+		a, .footer-text{
+			font-size: 30px;
+			color: white;
+			&:hover {
+				color: blue;
+				cursor: pointer;
+			}
+		}
 		.vk-logo{
 			-webkit-border-radius: 50%;
 			-moz-border-radius: 50%;
@@ -364,17 +373,8 @@ footer{
 			-o-border-radius: 50%;
 			border-radius: 50%;
 		}
-
-	}
-	.footer-left{
-		.number{
-			margin-top: 5%;
-			display: block;
-			width: 34vw;
-			font-size: 35px;
-			position: relative;
-			left: 50%;
-			margin-left: -17vw;
+		.mail-footer{
+			width: 100px;
 		}
 		.form-input{
 			border: none;

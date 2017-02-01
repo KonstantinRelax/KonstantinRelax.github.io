@@ -24,9 +24,9 @@
   </div> 
   <div class="row main-text">
     <div class="col-lg-12 ">
-      <h2>Это всего лишь пример моей работы...</h2>
-      <p class="header-title">Давайте работать вместе!</p>
-      <p class="header-description">На данном сайте представлены лишь крохи чудесных возможностей HTML5/CSS3, Bootstrap-3, JavaScript, его феймворка JQuery и библиотеки UI, canvas и прочего ;) Мои контакты есть в footer'е. До связи!</p>
+      <h2>Добрый день!</h2>
+      <p class="header-title">Меня зовут Константин и я занимаюсь адаптивной версткой</p>
+      <p class="header-description">Приглашаю Вас познакомиться с моими навыками и возможностями, и остановить свой выбор на молодом и талантливом специалисте</p>
       <a class="scroll" href="#servises"><div class="btn-canvas">
       	 Начать знакомство!
       	</div></a>
@@ -39,31 +39,31 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 header-section">
-				<p>Servises we provide</p>
+				<p>Примеры наших возможностей</p>
 			</div>
 		</div>
 		<div class="row">
 			<a href="#design" class='scroll'><div class="col-lg-3 col-xs-2 box box-1">
-				<p>Слайдер</p>
+				<p></p>
 			</div></a>
 			<a href="#canvas-sec" class='scroll'><div class="col-lg-3 col-xs-2 box box-2">
-				<p>Drag&Drop</p>
+				<p></p>
 			</div></a>
-			<a href="#0" class="col-lg-3 col-xs-2 box box-3" id="modal-trigger" data-type="cd-modal-trigger">Fire Modal Window</a>
-			<a href="footer" class='scroll'><div class="col-lg-3 col-xs-2 box box-4">Свяжитесь с нами</div></a>
+			<a href="#0" class="col-lg-3 col-xs-2 box box-3" id="modal-trigger" data-type="cd-modal-trigger"></a>
+			<a href="footer" class='scroll'><div class="col-lg-3 col-xs-2 box box-4"></div></a>
 		</div>
-		<p id="info-box-1" class="info-box">Слайдеры - удобные и гибко настраиваемые. В данной секции находится слайдер, построеннsй с использованием библиотеки slick и адаптивно настроенный.</p>
+		<p id="info-box-1" class="info-box">Слайдеры - удобные и гибко настраиваемые элементы сайта. В данной секции находится слайдер, построеннsй с использованием библиотеки slick и адаптивно настроенный.</p>
 		<p id="info-box-2" class="info-box">В этой секции мы приоткрыли завесу над работой с JQuery и UI, создав небольшую игру на этих фреймворках</p>
 		<p id="info-box-3" class="info-box">В отличии от своих соседей, этот блок никуда вас не перенесет. Эта секция и есть полигон для его работы:) Заинтригованы? Клик!</p>
 		<p id="info-box-4" class="info-box">В footer'e Вы обнаружите контакты, по которым с нами можно связаться</p>
-		<p class="info-box fadeIn">C parallax.js и его фреймворком scroll Вы уже познакомились) Для получения информации о других наших возможностях наведите курсор на изображение</p>
+		<p class="info-box fadeIn">C parallax.js Вы уже познакомились) Для получения информации о других наших возможностях наведите курсор на изображение</p>
 	</div>
 </section>
 
 <section id="design">
 	<div class="container">
 	<div class="row">
-		<div class="col-xs-12 header-section">Slick - Slider</div>
+		<div class="col-xs-12 header-section">Слайдер</div>
 	</div>
 		<div class="row sites" > 
 			<div class="col-md-4 site site-1" value=1></div>
@@ -115,10 +115,16 @@
 		 data-speed='0.5'
 		 data-z-index = '0'>>
 	<div class="container">
-		<div class="col-sm-6 col-xs-12 footer-left">
-			<img src="img/trubka.png" alt="" class="vk-logo"></img>
-			<img src="img/number.png" class ='number' alt="89823170272">
-<!-- <form id='reply' action="smart02.php" method="post">
+		<div class="col-xs-12 header-section">Свяжитесь со мной!</div>
+		<div class="col-xs-12 under-header">Если у Вас еще не появилось желание позвонить, значит Вы не читали <a href="#0" id="modal-trigger-footer">ЭТО</a></div>
+		    <div class="col-sm-6 col-xs-12 footer-left">
+			<br><img src="img/trubka.png" alt="" class="vk-logo"> 
+			<span class="footer-text">+7 (982) 317-02-72</span><br>
+			<img src="img/vk-logo.jpg" alt="" class='vk-logo'>
+			<a href="https://vk.com/id157100427">https://vk.com/id157100427</a><br><br>
+			<img src="img/mail-footer.jpg" class='mail-footer' alt=""> 
+			<a href="#footer">monologic.loggy@yandex.com</a>
+<!-- <form id='reply' action="smart02.php" method="post"><br>
 	<input type  = "text" 
 		   name  = 'uname' 
 		   class = 'form-input' 
@@ -141,7 +147,6 @@
 </form> -->
 		</div>
 		<div class="col-sm-6 col-xs-12 footer-right">
-			<img src="img/vk-logo.jpg" alt="" class='vk-logo'>
 			<div class="footer-box">
 				<a href = 'https://vk.com/id157100427'>
 					<img src="img/vk.jpg" alt="" class="vk">
@@ -234,6 +239,7 @@
 			//анимируем переход на расстояние - top за 1500 мс
 			$('body').animate({scrollTop: top}, 1500);
 		});
+
 		/*Обеспечение работы секции сервисес*/
 		$(".info-box").fadeOut();
 		$(".fadeIn").fadeIn();
@@ -274,6 +280,9 @@
 		})
 		$('.modal-close').click(function(){
 			$('body').css('overflow', 'auto');
+		})
+		$('#modal-trigger-footer').click(function(){
+			$('#modal-trigger').click();
 		})
 
 	});

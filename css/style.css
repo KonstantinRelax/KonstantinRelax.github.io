@@ -27,6 +27,8 @@ body {
   background-size: cover;
   width: 100vw;
   background: radial-gradient(circle farthest-corner at 30px 20px, #fff, grey);
+  -moz-background: radial-gradient(circle farthest-corner at 30px 20px, #fff, grey);
+  -webkit-background: radial-gradient(circle farthest-corner at 30px 20px, #fff, grey);
 }
 a {
   text-decoration: none;

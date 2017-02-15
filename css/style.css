@@ -163,6 +163,9 @@ canvas {
 .slider-sec .main-text .header-description {
   font-size: 16px;
 }
+.slider-sec .main-text .header-description-litle {
+  display: none;
+}
 .slider-sec .main-text .btn-header {
   display: inline-block;
   margin-top: 2%;
@@ -673,6 +676,8 @@ Modal Window
   }
   .slider-sec .main-text .header-description-litle {
     font-size: 15px;
+    display: inline-block;
+    
   }
   #servises, #design, #canvas-sec, footer{
     display: none;

@@ -8,12 +8,12 @@
     <title>Homepage</title>
   </head>
 <body>
-
 <section class="slider-sec parallax-window" 
 		 data-parallax="scroll" 
 		 data-image-src="img/photo.jpg"
 		 data-speed='0.5'
 		 data-z-index = '0'>
+<img src="img/toUp.png" alt="наверх" id="upper">
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0 logo">
 	    <div>
@@ -248,6 +248,10 @@
 			//анимируем переход на расстояние - top за 1500 мс
 			$('body').animate({scrollTop: top}, 1500);
 		});
+
+		$('#upper').click(function(){
+			$('body').animate({scrollTop: 0}, 1500);
+		})
 
 		/*Обеспечение работы секции сервисес*/
 		$(".info-box").fadeOut();

@@ -17,6 +17,14 @@
   transition: opacity 0.3s 0s, visibility 0s 0s;
 }
 /* main settings */
+#upper{
+  position: fixed;
+  right: 6vw;
+  width: 6vw;
+  top: 80vh;
+  z-index: 10;
+  cursor: pointer;
+}
 body {
   -webkit-cursor: url(../img/cursor.png), default;
   -moz-cursor: url(../img/cursor.png), default;

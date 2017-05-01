@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" 
+	  	  content="LeClick, бронирование, ресторан"> 
+	<link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	</script>
+    <title>LeClick</title>
+  </head>
+
+<body>
+<style>
+	/* Common parametres*/
+/* Common styles */
+body {
+  overflow-x: hidden;
+  color: black;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+body .row {
+  width: 992px;
+  margin: 0 auto;
+  padding: 0;
+}
+@media (max-width: 992px) {
+  body .row {
+    width: 90vw;
+  }
+}
+section,
+header,
+footer {
+  padding-bottom: 156px;
+}
+@media (max-width: 678px) {
+  section,
+  header,
+  footer {
+    width: 100vw;
+    background-position: 50% 0;
+  }
+}
+.box {
+  text-align: center;
+  display: inline-block;
+  vertical-align: text-top;
+}
+.box img {
+  width: 168px;
+}
+@media (min-width: 679px) and (max-width: 799px) {
+  .box img {
+    height: 100px;
+  }
+}
+.box-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 38px 0;
+  margin-bottom: 23px;
+}
+@media (min-width: 679px) and (max-width: 799px) {
+  .box-title {
+    font-size: 16px;
+  }
+}
+.box-desc {
+  text-align: center;
+  font-size: 16px;
+}
+@media (min-width: 679px) and (max-width: 799px) {
+  .box-desc {
+    font-size: 12px;
+  }
+}
+.underline {
+  left: 50%;
+  position: relative;
+  margin-left: -190px;
+  margin-top: 15px;
+  display: block;
+  width: 380px;
+  height: 2px;
+  border: 1px solid #25b2a7;
+}
+@media (max-width: 678px) {
+  .underline {
+    display: none;
+  }
+}
+.h-sect {
+  margin-top: 103px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media (max-width: 678px) {
+  .h-sect {
+    display: none;
+  }
+}
+.subh-sect {
+  text-align: center;
+  font-weight: bold;
+  font-size: 38px;
+  letter-spacing: -1px;
+  margin-top: 91px;
+  margin-bottom: 0;
+}
+@media (min-width: 679px) and (max-width: 768px) {
+  .col-sm-4 {
+    width: 32%;
+  }
+}
+/* Section head */
+@-webkit-keyframes enter {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes enter {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 0;
+  }
+}
+.head {
+  width: 100vw;
+  margin: 0;
+  background-image: url(../img/header-fon.png);
+  background-position: -3px -117px;
+  padding-bottom: 0;
+}
+.head .mobile-menu {
+  -webkit-animation: enter .2s linear 0s 1 normal forwards;
+          animation: enter .2s linear 0s 1 normal forwards;
+  padding-top: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #25b2a7;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 300px;
+  z-index: 10;
+}
+.head .mobile-menu ul {
+  list-style-type: none;
+}
+.head .mobile-menu ul li a {
+  color: white;
+  font-size: 24px;
+}
+.head .mobile-menu ul li a::after {
+  content: "____________________";
+  display: block;
+  margin-top: -15px;
+}
+.head .mobile-menu ul li a::hover,
+.head .mobile-menu ul li a::focus {
+  text-decoration: none;
+}
+.head .wrapper {
+  background-color: rgba(16, 16, 16, 0.3);
+  padding-bottom: 179px;
+  width: 100vw;
+}
+.head .wrapper div {
+  position: relative;
+  display: inline-block;
+}
+@media (max-width: 678px) {
+  .head .wrapper div {
+    position: static;
+  }
+}
+@media (max-width: 678px) {
+  .head .wrapper {
+    padding-bottom: 60px;
+  }
+}
+.head-hamburg {
+  display: none !important;
+  height: 3px;
+  width: 23px;
+  background-color: white;
+  position: absolute !important;
+  top: 27px;
+  left: 100%;
+  margin-left: -50px;
+  z-index: 11;
+  cursor: pointer;
+}
+@media (max-width: 678px) {
+  .head-hamburg {
+    display: block !important;
+  }
+}
+.head-hamburg::before {
+  content: '';
+  height: 3px;
+  width: 23px;
+  background-color: white;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+@media (max-width: 678px) {
+  .head-hamburg::before {
+    display: block;
+  }
+}
+.head-hamburg::after {
+  content: '';
+  height: 3px;
+  width: 23px;
+  background-color: white;
+  -webkit-transform: translateY(7px);
+      -ms-transform: translateY(7px);
+          transform: translateY(7px);
+}
+@media (max-width: 678px) {
+  .head-hamburg::after {
+    display: block;
+  }
+}
+.head-row {
+  height: 102px;
+  width: 992px;
+  padding-top: 25px;
+  display: block;
+  left: 50%;
+  margin-left: -500px;
+}
+@media (max-width: 992px) {
+  .head-row {
+    width: 100vw;
+    margin-left: -400px;
+  }
+}
+@media (max-width: 678px) {
+  .head-row {
+    margin-left: 0;
+  }
+}
+.head-row-info {
+  vertical-align: text-bottom;
+  color: white;
+  font-size: 18px;
+  margin: auto;
+  margin-top: 36px;
+}
+@media (max-width: 678px) {
+  .head-row-info {
+    display: none !important;
+  }
+}
+@media (min-width: 679px) and (max-width: 799px) {
+  .head-row-info {
+    font-size: 14px;
+  }
+}
+.head-row-info-1 {
+  padding-left: 62px;
+  padding-right: 0;
+  margin-top: 9px;
+}
+.head-row-info-1 img {
+  margin-right: 160%;
+  height: 58px;
+  width: 170px;
+}
+@media (min-width: 679px) and (max-width: 799px) {
+  .head-row-info-1 img {
+    margin-left: -30px;
+    height: 45px;
+    vertical-align: bottom;
+    margin-top: 5px;
+  }
+}
+.head-row-info-2 {
+  margin-left: 80px;
+}
+@media (max-width: 880px) {
+  .head-row-info-2 {
+    margin-left: 0;
+  }
+}
+.head-row-info-3 {
+  margin-left: -22px;
+}
+.head-row-info-4 {
+  margin-left: -15px;
+}
+.head-row-info-5 {
+  text-align: right;
+  padding-right: 0;
+  margin-left: -89px;
+  line-height: 1.66;
+}
+@media (max-width: 678px) {
+  .head-row-info-5 {
+    display: inline-block !important;
+    margin-left: -13px;
+    margin-top: 47px;
+    text-align: center;
+  }
+}
+@media (max-width: 880px) {
+  .head-row-info-5 {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+}
+.head-title {
+  width: 100vw;
+  margin-top: 159px;
+  margin-left: -7px;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  color: white;
+  line-height: 44px;
+}
+@media (max-width: 678px) {
+  .head-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-top: 143px;
+    margin-bottom: 70px;
+    margin: 143px auto 70px 0;
+    padding-right: 55px;
+    padding-left: 30px;
+  }
+}
+.head-title .head-under-title {
+  letter-spacing: 1px;
+  margin-left: 8px;
+}
+@media (max-width: 678px) {
+  .head-title .head-under-title {
+    letter-spacing: -1px;
+  }
+}
+.head-btn {
+  text-align: center;
+  margin-top: 80px;
+  margin-left: -125px;
+  position: relative;
+  background-color: #25b2a7;
+  left: 50%;
+  width: 275px;
+  height: 55px;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+@media (max-width: 678px) {
+  .head-btn {
+    margin-left: -150px;
+  }
+}
+/* Section menu */
+.menu {
+  text-align: center;
+}
+@media (max-width: 678px) {
+  .menu {
+    padding-bottom: 43px;
+  }
+}
+.menu .row {
+  margin-top: 170px;
+  padding: 0 10px;
+}
+@media (max-width: 678px) {
+  .menu .row {
+    margin-top: 12px;
+  }
+}
+.menu .box-desc {
+  line-height: 2;
+}
+@media (max-width: 678px) {
+  .menu-box-1 {
+    display: none;
+  }
+}
+@media (max-width: 678px) {
+  .menu-box-2 {
+    margin-top: 25%;
+  }
+}
+.menu-box-3 img {
+  width: 133px;
+}
+@media (max-width: 678px) {
+  .menu-box-3 {
+    display: none;
+  }
+}
+/* Section stat*/
+.stat {
+  background-color: #25b2a7;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 25px;
+  font-weight: 500;
+}
+@media (max-width: 678px) {
+  .stat {
+    padding-top: 55px;
+    padding-bottom: 3px;
+  }
+}
+.stat .row {
+  text-align: center;
+  margin-top: 50px;
+}
+@media (max-width: 678px) {
+  .stat .row {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .stat .row {
+    width: 90vw;
+  }
+}
+.stat-header {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 58px;
+}
+@media (max-width: 678px) {
+  .stat-header {
+    font-size: 22px;
+    padding-right: 45px;
+  }
+}
+@media (min-width: 679px) and (max-width: 799px) {
+  .stat-header {
+    font-size: 30px;
+  }
+}
+.stat-decimal {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+@media (max-width: 678px) {
+  .stat-decimal {
+    width: 80vw;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+.stat-decimal-wrap {
+  display: inline-block;
+  width: 810px;
+}
+@media (max-width: 678px) {
+  .stat-decimal-wrap {
+    width: 80vw;
+    text-align: center;
+    padding: 0;
+    margin-top: 5px;
+    margin-left: -22px;
+  }
+}
+@media (max-width: 880px) {
+  .stat-decimal-wrap {
+    width: 90vw;
+  }
+}
+.stat-decimal-wrap .col-xs-7 {
+  margin-top: -12px;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 80px;
+}
+@media (max-width: 678px) {
+  .stat-decimal-wrap .col-xs-7 {
+    width: 80vw;
+    padding: 0;
+    margin-top: 33px;
+    margin-left: 15px;
+  }
+  .stat-decimal-wrap .col-xs-7 span {
+    margin-top: 5px;
+    margin-left: -48px;
+  }
+}
+.stat-decimal-wrap .col-xs-5 {
+  padding-left: 58px;
+  padding-right: 0;
+  margin-top: -12px;
+  height: 200px;
+}
+@media (max-width: 678px) {
+  .stat-decimal-wrap .col-xs-5 {
+    width: 80vw;
+    padding: 0;
+    margin-top: 48px;
+    margin-left: 19px;
+  }
+  .stat-decimal-wrap .col-xs-5 span {
+    margin-top: 5px;
+    margin-left: -52px;
+  }
+}
+.stat-decimal-sm {
+  width: 100%;
+  color: #132448;
+  font-weight: bold;
+}
+@media (max-width: 678px) {
+  .stat-decimal-sm {
+    width: inherit;
+    height: 150px;
+    text-align: center !important;
+    padding: 0;
+  }
+}
+.stat-decimal-sm-right {
+  display: inline-block;
+  float: right;
+  height: 97px;
+}
+@media (max-width: 678px) {
+  .stat-decimal-sm-right {
+    height: inherit;
+    width: inherit;
+  }
+}
+.stat-decimal-sm-left {
+  height: 97px;
+}
+@media (max-width: 678px) {
+  .stat-decimal-sm-left {
+    height: inherit;
+    width: inherit;
+  }
+}
+.stat span {
+  font-size: 20px;
+  float: right;
+  margin-top: -16px;
+  letter-spacing: -1px;
+  display: inline-block;
+  position: relative;
+}
+@media (max-width: 678px) {
+  .stat span {
+    width: 110vw;
+    display: inline-block;
+    margin-top: -2px;
+    margin-left: -33px;
+    text-align: center;
+    float: left;
+  }
+}
+/* Section rest*/
+.rest {
+  text-align: center;
+  padding-bottom: 163px;
+}
+@media (max-width: 678px) {
+  .rest {
+    padding-bottom: 57px;
+  }
+}
+.rest .subh-sect {
+  margin-bottom: 0;
+}
+@media (max-width: 678px) {
+  .rest .subh-sect {
+    width: 270px;
+    margin: 62px auto 17px auto;
+    padding-left: 15px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 1.2;
+  }
+}
+.rest .col-sm-4 {
+  padding-top: 16px;
+}
+.rest .col-sm-4 .box-title {
+  margin-bottom: 15px;
+}
+@media (max-width: 678px) {
+  .rest-base {
+    display: none;
+  }
+}
+.rest-base img {
+  height: 106px;
+  margin-top: 21px;
+  margin-bottom: -7px;
+}
+@media (max-width: 678px) {
+  .rest-optimum {
+    display: none;
+  }
+}
+.rest-optimum img {
+  height: 106px;
+  margin-top: 21px;
+  margin-bottom: -7px;
+}
+@media (max-width: 678px) {
+  .rest-premium {
+    margin-top: 10%;
+  }
+}
+.rest-premium img {
+  height: 130px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+.rest a {
+  display: inline-block;
+  font-size: 16px;
+  color: #25b2a7;
+  margin-bottom: 36px;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+@media (max-width: 678px) {
+  .rest a {
+    display: none;
+  }
+}
+/* Section sell*/
+.sell {
+  padding-top: 57px;
+  padding-left: 18px;
+  padding-bottom: 52px;
+  text-align: center;
+  background-color: #fdbb16;
+}
+@media (max-width: 678px) {
+  .sell {
+    padding-top: 70px;
+    padding-bottom: 222px;
+  }
+}
+@media (max-width: 678px) {
+  .sell .stat-header {
+    width: 220px;
+    margin: auto;
+    line-height: 1.3;
+  }
+}
+.sell .economy {
+  margin-top: -28px;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media (max-width: 678px) {
+  .sell .economy {
+    margin-top: 15px;
+    margin-bottom: 13px;
+    padding: 0;
+    margin-left: -32px;
+  }
+}
+@media (max-width: 678px) {
+  .sell-desc-first {
+    margin-top: -11px;
+    margin-left: -56px;
+    width: 244px;
+    display: inline-block;
+  }
+}
+@media (max-width: 678px) {
+  .sell-desc-second {
+    margin-left: -56px;
+  }
+}
+.sell p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.7;
+}
+@media (max-width: 678px) {
+  .sell p {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 679px) and (max-width: 799px) {
+  .sell p {
+    font-size: 16px;
+  }
+}
+.sell-decimal {
+  margin-top: -10px;
+  margin-bottom: 49px;
+  position: relative;
+  width: 645px;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 678px) {
+  .sell-decimal {
+    width: 80vw;
+    margin-top: inherit;
+    margin-bottom: 43px;
+    margin-left: -33px;
+  }
+}
+@media (min-width: 679px) and (max-width: 799px) {
+  .sell-decimal {
+    height: 200px;
+  }
+}
+/* Section reserv*/
+.reserv {
+  padding-top: 112px;
+  padding-bottom: 164px;
+}
+@media (max-width: 678px) {
+  .reserv {
+    padding-top: 65px;
+    padding-bottom: 41px;
+  }
+}
+.reserv .row {
+  padding-left: 0;
+}
+.reserv .stat-header {
+  padding-left: 10px;
+  margin-bottom: 27px;
+}
+@media (max-width: 678px) {
+  .reserv .stat-header {
+    font-size: 20px;
+    margin: 62px auto 17px auto;
+    letter-spacing: 1.2px;
+    line-height: 1.3;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+}
+.reserv-list {
+  padding-top: 130px;
+  float: left;
+}
+@media (max-width: 678px) {
+  .reserv-list {
+    padding-top: 0;
+  }
+}
+.reserv-list ul {
+  margin-left: 40px;
+  margin-top: 19px;
+  color: #fdbb16;
+  font-size: 26px;
+  line-height: 1.5;
+}
+@media (max-width: 678px) {
+  .reserv-list ul {
+    font-size: 24px;
+    margin-left: -32px;
+    margin-top: 62px;
+    letter-spacing: -1px;
+  }
+}
+@media (max-width: 870px) {
+}
+.reserv-list ul span {
+  vertical-align: baseline;
+  color: black;
+  font-size: 16px;
+}
+.reserv img {
+  margin-top: 50px;
+  width: 700px;
+  margin-left: -233px;
+}
+@media (max-width: 678px) {
+  .reserv img {
+    margin-top: 31px;
+    width: 360px;
+    margin-left: -105px;
+  }
+}
+@media (min-width: 679px) and (max-width: 768px) {
+  .reserv img {
+    width: 490px;
+    margin-left: -195px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .reserv img {
+    width: 620px;
+    margin-left: -239px;
+  }
+}
+/* Section trust*/
+.trust {
+  padding-left: 0;
+  padding-top: 34px;
+  padding-bottom: 80px;
+  background-color: #132448;
+  text-align: center;
+}
+@media (max-width: 678px) {
+  .trust {
+    padding: 71px 0 67px 0;
+  }
+}
+.trust .stat-header {
+  color: white;
+  margin-bottom: 65px;
+  margin-top: 0;
+  padding-left: 0;
+}
+@media (max-width: 678px) {
+  .trust .stat-header {
+    font-size: 21px;
+  }
+}
+.trust img {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+@media (max-width: 678px) {
+  .trust img {
+    width: 80vw;
+    margin-top: -9px;
+    margin-left: -28px;
+  }
+}
+.trust-logo {
+  text-align: center;
+}
+.trust-logo-row {
+  display: inline-block;
+  width: 95%;
+}
+@media (min-width: 1010px) {
+  .trust-logo-row {
+    width: 992px;
+  }
+}
+.trust-logo-ginza {
+  height: 100px;
+}
+@media (max-width: 678px) {
+  .trust-logo-ginza {
+    width: 120px;
+    height: 140px;
+  }
+}
+.trust-logo-maison {
+  height: 73px;
+}
+@media (max-width: 678px) {
+  .trust-logo-maison {
+    width: 130px;
+    height: 140px;
+  }
+}
+.trust-logo-gour {
+  height: 91px;
+}
+@media (max-width: 678px) {
+  .trust-logo-gour {
+    width: 126px;
+    height: 120px;
+  }
+}
+.trust-logo-wrf {
+  height: 36px;
+}
+@media (max-width: 678px) {
+  .trust-logo-wrf {
+    position: absolute;
+    width: 320px !important;
+    margin-left: -165px !important;
+    margin-top: 140px !important;
+  }
+}
+.trust-logo-raport {
+  height: 97px;
+}
+@media (max-width: 678px) {
+  .trust-logo-raport {
+    width: 85px;
+    height: 120px;
+  }
+}
+/* Section partner*/
+.partner {
+  padding-top: 47px;
+  padding-bottom: 116px;
+  line-height: 1.1;
+}
+.partner .underline {
+  margin-bottom: 140px;
+  border-color: #fdbb16;
+}
+.partner .box-title {
+  padding-left: 22px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+@media (max-width: 678px) {
+  .partner .box-title {
+    margin-top: 0;
+    margin-left: -45px;
+  }
+}
+.partner .box-desc {
+  font-size: 14px;
+}
+.partner img {
+  width: 156px;
+}
+.partner-widget {
+  padding-top: 0;
+}
+.partner-widget img {
+  margin-bottom: 59px;
+}
+@media (max-width: 678px) {
+  .partner-widget {
+    margin-top: 66px;
+  }
+}
+.partner-loyal {
+  padding-top: 15px;
+}
+.partner-loyal img {
+  margin-bottom: 64px;
+}
+.partner-loyal img {
+  width: 170px;
+}
+@media (max-width: 678px) {
+  .partner-loyal {
+    display: none;
+  }
+}
+.partner-content {
+  padding-top: 25px;
+}
+.partner-content img {
+  margin-bottom: 83px;
+}
+@media (max-width: 678px) {
+  .partner-content {
+    display: none;
+  }
+}
+/* Section smi*/
+.smi {
+  padding-bottom: 135px;
+}
+@media (max-width: 678px) {
+  .smi {
+    padding-bottom: 80px;
+  }
+}
+@media (min-width: 678px) {
+  .smi .br {
+    display: none;
+  }
+}
+.smi .underline {
+  border-color: #d0011b;
+  margin-bottom: 62px;
+}
+.smi .stat-header {
+  margin: 45px 0;
+}
+@media (max-width: 678px) {
+  .smi .stat-header {
+    font-size: 20px;
+    margin-top: 33px;
+    display: block;
+  }
+}
+.smi .box-title {
+  margin-top: 34px;
+  margin-bottom: 3px;
+  display: block;
+}
+@media (max-width: 678px) {
+  .smi .box-title {
+    margin-top: 18px;
+    text-align: left;
+    margin-left: -29px;
+  }
+}
+.smi .box img {
+  width: 310px;
+}
+@media (max-width: 678px) {
+  .smi .box img {
+    width: 100vw;
+    margin-left: -37px;
+  }
+}
+@media (min-width: 679px) and (max-width: 992px) {
+  .smi .box img {
+    width: 108%;
+  }
+}
+.smi .box-desc {
+  font-size: 14px;
+  text-align: left;
+}
+@media (max-width: 678px) {
+  .smi .box-desc {
+    margin-top: 9px;
+    text-align: left;
+    margin-left: -29px;
+  }
+}
+.smi-one .box-title {
+  padding-right: 50px;
+}
+@media (max-width: 678px) {
+  .smi-one {
+    display: none;
+  }
+}
+@media (max-width: 678px) {
+  .smi-three {
+    display: none;
+  }
+}
+/* Section contact*/
+.contact {
+  position: relative;
+  text-align: center;
+  padding-top: 66px;
+  background-color: #132448;
+}
+@media (max-width: 678px) {
+  .contact {
+    padding-top: 85px;
+  }
+}
+.contact .stat-header {
+  font-weight: 500;
+  color: white;
+  margin-bottom: 40px;
+}
+@media (max-width: 678px) {
+  .contact .stat-header {
+    font-size: 18px;
+    padding-left: 30px;
+    margin-bottom: 35px;
+  }
+}
+.contact-form {
+  width: 967px;
+  display: inline-block;
+  padding-right: 59px;
+  padding-left: 78px;
+  margin-top: -7px;
+}
+.contact-form .col-sm-5,
+.contact-form .col-sm-7,
+.contact-form .col-sm-4 {
+  padding-left: 0;
+}
+@media (max-width: 678px) {
+  .contact-form {
+    padding-left: 0;
+    padding-right: 0;
+    width: 90vw;
+  }
+}
+@media (min-width: 679px) and (max-width: 992px) {
+  .contact-form {
+    padding-left: 0;
+    padding-right: 0;
+    width: 90vw;
+  }
+}
+.contact-form-input {
+  width: 100%;
+  height: 48px;
+  margin: 7px 0px;
+  padding-left: 7px;
+}
+@media (min-width: 679px) and (max-width: 992px) {
+  .contact-form-input {
+    width: 110%;
+  }
+}
+.contact-form textarea {
+  margin-left: -18px;
+  margin-top: 6px;
+  padding-left: 7px;
+  padding-top: 7px;
+  width: 473px;
+  height: 173px;
+}
+@media (min-width: 679px) and (max-width: 992px) {
+  .contact-form textarea {
+    margin-left: 11%;
+    width: 88%;
+  }
+}
+@media (max-width: 678px) {
+  .contact-form textarea {
+    width: inherit;
+    margin: 0;
+  }
+}
+.contact-form-submit {
+  width: 100%;
+  height: 55px;
+  background-color: #fdbb16;
+  border: none;
+  font-size: 18px;
+  color: white;
+}
+
+</style>
+	<header class="head">
+		<nav class="mobile-menu hidden">
+			<ul>
+				<li><a href="">Парнерам</a></li>
+				<li><a href="">Ресторанам</a></li>
+				<li><a href="">СМИ</a></li>
+			</ul>
+		</nav>
+		<div class="wrapper">
+			<div class="head-hamburg"></div>
+			<div class="head-row">
+				<div class="head-row-info-1 head-row-info col-sm-3">
+					<picture>
+						<source type="image/svg+xml" 
+								srcset ="img/header-logo.svg">
+						<img type="image/svg+xml" src="img/header-logo.svg" alt="LeClick" />
+					</picture>
+				</div>
+				<div class="head-row-info-2 head-row-info col-sm-2">Партнерам</div>
+				<div class="head-row-info-3 head-row-info col-sm-2">Ресторанам</div>
+				<div class="head-row-info-4 head-row-info col-sm-2">СМИ</div>
+				<div class="head-row-info-5 head-row-info col-sm-3 col-xs-12">+7 (495) 374-9299<br />partners@leclick.ru</div>
+			</div>
+			<div class="head-title">Станьте нашим<br /><span class="head-under-title">клиентом или  партнером</span></div>
+			<button class="head-btn">Присоединяйтесь</button>
+		</div>	
+	</header>
+
+	<section class="menu">
+		<div class="row">
+			<div class="box menu-box-1 col-sm-4">
+				<picture>
+					<source type="image/svg+xml"
+						media='(max-width: 678px)'
+						srcset='img/menu-rest.svg'>
+					<img type="image/svg+xml" src="img/menu-rest.svg" alt="" />
+				</picture>
+				<div class="box-title">Ресторанам</div>
+				<div class="box-desc">
+					продвижение ресторана<br />
+					новые гости<br />
+					электронная книга резервов<br />
+				</div>
+			</div>
+			<div class="box menu-box-2 col-sm-4">
+				<picture>
+					<img type="image/svg+xml" src="img/menu-partner.svg" alt="" />
+				</picture>
+				<div class="box-title">Партнерам</div>
+				<div class="box-desc">
+					виджет на сайт<br />
+					прогрмма лояльности<br />
+					адекватный контент<br />
+				</div>
+			</div>
+			<div class="box menu-box-3 col-sm-4">
+				<picture>
+					<source type="image/svg+xml"
+							media='(max-width: 678px)'
+							srcset='img/menu-smi.svg'>
+					<img type="image/svg+xml" src="img/menu-smi.svg" alt="" />
+				</picture>
+				<div class="box-title">СМИ</div>
+				<div class="box-desc">
+					комментарии<br />
+					спикеры ресторанного рынка<br />
+					статистика<br />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="stat">
+		<div class="stat-header">Ежемесячно более:</div>
+		<div class="row">
+			<div class="stat-decimal-wrap">
+				<picture>
+					<img src="img/1500k.svg" type="image/svg+xml" class="stat-decimal" />
+				</picture>
+				<span>Просмотров</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="stat-decimal-wrap">
+				<div class="col-xs-7">
+					<picture>
+						<img src="img/125k.svg" type="image/svg+xml" class="stat-decimal-sm stat-decimal-sm-left" />
+					</picture>
+					<span>Размещенных гостей</span>
+				</div>
+				<div class="col-xs-5">
+					<picture>
+						<img src="img/3,5k.svg" type="image/svg+xml" alt="3,500" class="stat-decimal-sm stat-decimal-sm-right" />
+					</picture>
+					<span>Банкетных заявок</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="rest">
+		<div class="h-sect"> Ресторанам</div>
+		<div class="underline"></div>
+		<div class="subh-sect"><strong> Пакеты годового обслуживания</strong></div>
+		<a href="#" class="rest-link">Cкачать пакеты</a>
+		<div class="row">
+			<div class="box col-sm-4 rest-base">
+				<picture>
+					<source type="image/svg+xml"
+						media='(max-width: 678px)'
+						srcset='img/rest-base.svg'>
+					<img type="image/svg+xml" src="img/rest-base.svg" alt="" />
+				</picture>
+				<div class="box-title">Базовый</div>
+				<div class="box-desc">набор базовых инструментов<br />для продвижения</div>
+			</div>
+			<div class="box col-sm-4 rest-optimum">
+				<picture>
+					<source type="image/svg+xml"
+						media='(max-width: 678px)'
+						srcset='img/rest-optimum.svg'>
+					<img type="image/svg+xml" src="img/rest-optimum.svg" alt="" />
+				</picture>
+				<div class="box-title">Оптимальный</div>
+				<div class="box-desc">выгодное предложение<br />по выгодной цене</div>
+			</div>
+			<div class="box col-sm-4 rest-premium">
+				<picture>
+					<img type="image/svg+xml" src="img/rest-premium.svg" alt="" />
+				</picture>
+				<div class="box-title">Премиальный</div>
+				<div class="box-desc">максимальная эффективность<br />и прогнозируемый результат</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sell">
+		<div class="stat-header"> Что получит Ваш ресторан:</div>
+		<p class='economy'>Экономия:</p>
+		<picture>
+			<img src='img/30.svg' type="image/svg+xml" class="sell-decimal" />
+		</picture>
+		<div class="sell-desc">
+			<p class='sell-desc-first'>
+				Увеличение количества просмотров Вашего ресторана в<strong> 2,5 </strong>раза
+			</p>
+			<p class="sell-desc-second">
+				Профессиональное продвижение в Интернет
+			</p>
+			<p class="sell-desc-second">
+				Один договор - три ведущие площадки (<strong>40%</strong> рынка)
+			</p>
+		</div>
+	</section>
+
+	<section class="reserv">
+		<div class="stat-header">Электронная книга резервов</div>
+		<div class="row">
+			<div class="col-sm-6"><img src="img/reserv-vue.png" alt="" /></div>
+			<div class="col-sm-6 reserv-list">
+				<ul>
+					<li><span>сбор и хранение информации о гостях</span></li>
+					<li><span>oнлайн подтверждение брони</span></li>
+					<li><span>целевые рассылки и уведомления</span></li>
+					<li><span>уменьшение оттока гостей</span></li>
+					<li><span>контроль и обучение персонала</span></li>
+					<li><span>поддержка call-центра (24/7)</span></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="trust">
+		<div class="stat-header">Нам доверяют</div>
+		<div class="trust-logo-row">
+			<picture>
+				<source media ='(max-width: 678px)'
+						type="image/svg+xml"
+						srcset='img/trust-logos-mobile.svg'>	
+				<img type="image/svg+xml" src="img/trust-logos.svg" alt="" />
+			</picture>
+			
+		</div>
+	</section>
+
+	<section class="partner">
+		<div class="h-sect">Партнерам</div>
+		<div class="underline"></div>
+		<div class="row">
+			<div class="box col-sm-4 partner-widget">
+				<picture>
+					<img type="image/svg+xml" src="img/partner-widget.svg" alt="" />
+				</picture>
+				<div class="box-title">Виджет на сайт</div>
+				<div class="box-desc"> устанавливаем виджет бронирования, который легко интегрируется<br /> на ваш Интернет-ресурс.</div>
+			</div>
+			<div class="box col-sm-4 partner-loyal">
+				<picture>
+					<img type="image/svg+xml" src="img/partner-loyal.svg" alt="" />
+				</picture>
+				<div class="box-title">Программа лояльности</div>
+				<div class="box-desc">Мы готовы присоединиться к вашей программе лояльности и предложить вашим клиентам интересные бонусы <br />при бронировании ресторанов.</div>
+			</div>
+			<div class="box col-sm-4 partner-content">
+				<picture>
+					<img type="image/svg+xml" src="img/partner-content.svg" alt="" />
+				</picture>
+				<div class="box-title">Контент</div>
+				<div class="box-desc">В нашей базе более 8000 ресторанов<br />Мы с удовольствием предоставим вам<br />не только виджеты бронирования,<br /> но и качественный и актуальный контент.</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="smi">
+		<div class="h-sect">СМИ</div>
+		<div class="underline"></div>
+		<div class="stat-header">Новости<br class='br'/> и публикации</div>
+		<div class="row">
+			<div class="box col-sm-4 smi-one">
+				<img src="img/smi-one.png" alt="" />
+				<div class="box-title">В ресторан за один клик</div>
+				<div class="box-desc">Обладая большой клиентской базой, а также знаниями ресторанного рынка, мы готовы</div>
+			</div>
+			<div class="box col-sm-4 smi-two">
+				<img src="img/smi-two.png" alt="" />
+				<div class="box-title">Зачем ресторану нужны онлайн</div>
+				<div class="box-desc">Если Вам необходима форма бронирования<br class="br" /> на Ваш сайт, </div>
+			</div>
+			<div class="box col-sm-4 smi-three">
+				<img src="img/smi-three.png" alt="" />
+				<div class="box-title">Джинн-угадыватель для Гурмана</div>
+				<div class="box-desc">Мы с удовольствием предоставим вам не только виджеты бронирования</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="contact">
+		<div class="stat-header">Присоединяйтесь</div>
+		<form action="" class="contact-form">
+			<div class="col-sm-5 col-xs-12">
+				<input type="text" 
+						class="contact-form-input"
+						placeholder="Имя">
+				<input type="text" 
+						class="contact-form-input"
+						placeholder="Телефон">
+				<input type="text" 
+						class="contact-form-input"
+						placeholder="Почта">
+			</div>
+			<div class="col-sm-7 col-xs-12">
+				<textarea name="" 
+							placeholder= 'Текст письма' 
+							cols="30" 
+							rows="4"></textarea>
+			</div>
+			<div class="col-sm-offset-8 col-sm-4 col-xs-12"><input type="submit" class="contact-form-submit"></div>
+		</form>
+	</footer>
+
+<script src="js/main.js"></script>
+</body>
+
+</html>
+
+   
